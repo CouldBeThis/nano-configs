@@ -43,7 +43,7 @@ icolor green "^[[:space:]]*(bind|set|unset|syntax|header|include|magic)\>"
 icolor white ""(\\.|[^"])*""
 ## Comments
 icolor brightblue "^[[:space:]]*#.*$"
-icolor cyan "^[[:space:]]*##.*$"
+icolor blue "^[[:space:]]*##.*$"
 
 ## Trailing whitespace
 icolor ,green "[[:space:]]+$"
