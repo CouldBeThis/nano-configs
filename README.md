@@ -73,6 +73,15 @@ Error in /home/youruser/.nanorc on line 149: Command "xxxxx" not understood
  * [ ] Make use of more keys I don't have on this particular device such as `del`, `pg up`/`pg dn` and `function` keys. 
  * [ ] Improve color scheme
  * [ ] Improve `ctrl` + arrow key navigation in how it deals with punctuation and special charecters... currently sort of confusing.
+* Syntax definition improvements (send some to upstream if they have not already been decided against there)
+ 	* Markdown
+ 		* [ ] add `==`text`==` for highlighting
+ 		* [ ] codeblocks are a bit odd; see if I misunderstand their use of if they need tweaking
+ 		* [ ] add nicer (lower contrast) colors if code is in a link 
+ 		* [ ] improve anchor link display (higher constrast), e.g. `[top](#top)`
+ 		* [ ] escape charecters
+
+
 
 ### In this repo
 
@@ -82,14 +91,6 @@ Error in /home/youruser/.nanorc on line 149: Command "xxxxx" not understood
  	* [ ] Install script ???
  * [ ] Summarize shortcuts (cheatsheet)
  	* [ ] Perhaps including rationalization fos some decisions
- * Syntax definition improvements (send some to upstream if they have not already been decided against there)
- 	* Markdown
- 		* [ ] add `==`text`==` for highlighting
- 		* [ ] codeblocks are a bit odd; see if I misunderstand their use of if they need tweaking
- 		* [ ] add nicer (lower contrast) colors if code is in a link, e.g. `[\`nano\` homepage](https://url.url)`  
- 		* [ ] improve anchor link display (higher constrast), e.g. `[top](#top)`
- 		* [ ] escape charecters
-
 
 ### Wishlist (not sure if possible)
 
