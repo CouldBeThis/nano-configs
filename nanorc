@@ -97,6 +97,7 @@ bind ^G findnext all
 #bind ^D findprevious all
 bind ^R replace main
 #bind M-X flipnewbuffer all
+unbind M-X all
 bind M-X cut all
 bind M-C copy all
 bind M-V paste all
@@ -112,6 +113,13 @@ bind ^A mark main
 #bind ^T gotodir browser
 bind ^Y speller main
 
+## Throw away the current line (or the marked region). (This function is bound by default to <Meta+Delete>.)
+bind M-D zap main
+
+## Let an unmodified Backspace or Delete erase the marked region (instead of a single character, and without affecting the cutbuffer).
+## does not work on MICROWAVE
+set zap
+
 ## original
 ##bind M-U undo main
 ##bind M-R redo main
@@ -122,8 +130,6 @@ bind ^Z undo main
 #bind ^U undo main
 #bind ^E redo main
 #set multibuffer
-
-
 
 ## below installed and set up from https://github.com/scopatz/nanorc
 ## to install:
