@@ -80,6 +80,7 @@ Error in /home/youruser/.nanorc on line 149: Command "xxxxx" not understood
  		* [ ] add nicer (lower contrast) colors if code is in a link 
  		* [ ] improve anchor link display (higher constrast), e.g. `[top](#top)`
  		* [ ] escape charecters
+ 		* [ ] `YAML` frontmatter
 
 
 
