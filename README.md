@@ -72,6 +72,7 @@ Error in /home/youruser/.nanorc on line 149: Command "xxxxx" not understood
  	* [ ] Perhaps split up files and `include` them in pieces
  * [ ] Make use of more keys I don't have on this particular device such as `del`, `pg up`/`pg dn` and `function` keys. 
  * [ ] Improve color scheme
+ * Improve `ctrl` + arrow key navigation in how it deals with punctuation and special charecters... currently sort of confusing.
 
 ### In this repo
 
