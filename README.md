@@ -86,8 +86,9 @@ Error in /home/youruser/.nanorc on line 149: Command "xxxxx" not understood
  	* Markdown
  		* [ ] add `==`text`==` for highlighting
  		* [ ] codeblocks are a bit odd; see if I misunderstand their use of if they need tweaking
- 		* [ ] add nicer (lower contrast) colors if code is in a link, e.g. `[`nano` homepage](https://url.url)` 
+ 		* [ ] add nicer (lower contrast) colors if code is in a link, e.g. `[\`nano\` homepage](https://url.url)` 
  		* [ ] improve anchor link display (higher constrast), e.g. `[top](#top)`
+ 		* [ ] escape charecters
 
 
 ### Wishlist (not sure if possible)
