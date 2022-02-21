@@ -64,7 +64,7 @@ Error in /home/youruser/.nanorc on line 149: Command "xxxxx" not understood
 
 ## todo
 
-### In the `nanorc`
+### In the `nanorc` and `.nanorc` files
 
  * [ ] Spellchecking
  * [ ] Tidy up, remove old commented out configs
