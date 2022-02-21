@@ -83,7 +83,7 @@ Error in /home/youruser/.nanorc on line 149: Command "xxxxx" not understood
  * [ ] Summarize shortcuts (cheatsheet)
  	* [ ] Perhaps including rationalization fos some decisions
 
-Wishlist (not sure if possible):
+### Wishlist (not sure if possible)
 
  * [ ] Smarter word wrapping that doesn't cut words apart
  * [ ] Change contents of the help menu at the bottom
