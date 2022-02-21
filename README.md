@@ -75,6 +75,7 @@ In the `nanorc`:
 In this repo:
 
  * [ ] Organize files so it's clear what belongs to be and what belongs to the `scopatz/nanorc` repo
+ 	* [ ] Perhaps include as a (forked) submodule
  * [ ] Install instructions
  	* [ ] Install script ???
  * [ ] Summarize shortcuts (cheatsheet)
