@@ -96,6 +96,12 @@ Wishlist (not sure if possible):
  		* also include for task list (` * [ ]` or ` - [ ]`)
  		* recognize either ` * ` or ` - ` lists
  	* make current selection, or if none selected, current word **bold**, *italic*, ~~strikethrough~~, ==highlighted==, `code`
+ 	* insert link/image 
+ 		* with clipboard URL inserted and cursor in description/alt portion
+ 		* if text selected, consider that text as description/alt and paste URL from clipboard 
+ 		* is it possible to detect if clipboard contains URL?
+ 		* how to interact between various clipboards?
+ 	* Possible to have an extra help screen for shortcuts and/or markdown syntaxt cheatsheet?
  * [ ] Improved (less confusing) interaction bewteen terminal emulator and `nano`
 
 ## helpful resources
