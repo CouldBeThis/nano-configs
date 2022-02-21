@@ -29,7 +29,7 @@ $ nano --version
  (C) 2014-2022 the contributors to nano
  Compiled options: --enable-utf8
 ```
-I have v. `6.2`. If you have version `5.x` or even lower, some options will not work. In my experience, any incompatibilities will not prevent use of the program but you will be alerted. See [troubleshooting]("#troubleshooting") below. You can comment out lines of code that generate errors. 
+I have v. `6.2`. If you have version `5.x` or even lower, some options will not work. In my experience, any incompatibilities will not prevent use of the program but you will be alerted. See [troubleshooting](#troubleshooting) below. You can comment out lines of code that generate errors. 
 Information is available about the differences between `nano` versions on the GNU `nano` website. For an overview, see [`IMPROVEMENTS`](https://nano-editor.org/dist/latest/IMPROVEMENTS). For more detail, see [`NEWS`](https://nano-editor.org/dist/latest/NEWS) and for the highest amount of detail there is the [`CHANGELOG`](https://nano-editor.org/dist/latest/ChangeLog)
 
 Consult [`nano`'s Download page](https://nano-editor.org/download.php) for install options but here is what I know. 
@@ -57,9 +57,9 @@ You will be alerted to errors in 2 ways:
  1. When you open `nano` there will be an error bar near the bottom displaying, `[ Mistakes in '/home/yourusername/.nanorc' ]`
  2. When you then exit `nano`, there will be a description of the error and where it was found above the new command prompt, for example:
 
- ```
- Error in /home/youruser/.nanorc on line 149: Command "xxxxx" not understood
- ```
+```bash
+Error in /home/youruser/.nanorc on line 149: Command "xxxxx" not understood
+```
  so you can open nano and go to that line and inspect it, fix it or just prepend with `#` to comment it out.
 
 ## todo
@@ -74,6 +74,7 @@ In the `nanorc`:
 
 In this repo:
 
+ * [ ] Organize files so it's clear what belongs to be and what belongs to the `scopatz/nanorc` repo
  * [ ] Install instructions
  	* [ ] Install script ???
  * [ ] Summarize shortcuts (cheatsheet)
@@ -85,6 +86,7 @@ Wishlist (not sure if possible):
  * [ ] Change contents of the help menu at the bottom
  * [ ] Keystroke to commit file to `git` repo
  * [ ] Optimize keyboard shortcuts for markdown
+ * [ ] Improved (less confusing) interaction bewteen terminal emulator and `nano`
 
 ## helpful resources
 
