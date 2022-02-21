@@ -1,3 +1,5 @@
+## Please see the file README.md before using!
+
 set linenumbers
 # set mouse does the opposite of what it sounds like.. unsets the mouse.
 #set mouse
@@ -112,6 +114,13 @@ bind ^A mark main
 #bind ^T gotoline main
 #bind ^T gotodir browser
 bind ^Y speller main
+
+# Toggles the display of line numbers in front of the text.
+unbind M-L all
+bind M-L linenumbers all
+
+# Goes to a specific line (and column if specified). Negative numbers count from the end of the file (and end of the line).
+bind M-G gotoline all
 
 ## Throw away the current line (or the marked region). (This function is bound by default to <Meta+Delete>.)
 bind M-D zap main
