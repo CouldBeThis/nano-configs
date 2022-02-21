@@ -64,7 +64,7 @@ Error in /home/youruser/.nanorc on line 149: Command "xxxxx" not understood
 
 ## todo
 
-In the `nanorc`:
+### In the `nanorc`
 
  * [ ] Spellchecking
  * [ ] Tidy up, remove old commented out configs
@@ -73,7 +73,7 @@ In the `nanorc`:
  * [ ] Make use of more keys I don't have on this particular device such as `del`, `pg up`/`pg dn` and `function` keys. 
  * [ ] Improve color scheme
 
-In this repo:
+### In this repo
 
  * [ ] Organize files so it's clear what belongs to be and what belongs to the `scopatz/nanorc` repo
  	* [ ] Perhaps include as a (forked) submodule
