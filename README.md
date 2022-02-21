@@ -101,7 +101,8 @@ Error in /home/youruser/.nanorc on line 149: Command "xxxxx" not understood
  		* if text selected, consider that text as description/alt and paste URL from clipboard 
  		* is it possible to detect if clipboard contains URL?
  		* how to interact between various clipboards?
- 	* Possible to have an extra help screen for shortcuts and/or markdown syntaxt cheatsheet?
+ 	* Extra help screen for shortcuts and/or markdown syntaxt cheatsheet
+ 	* Generate a TOC
  * [ ] Improved (less confusing) interaction bewteen terminal emulator and `nano`
 
 ## helpful resources
