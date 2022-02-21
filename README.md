@@ -82,10 +82,13 @@ Error in /home/youruser/.nanorc on line 149: Command "xxxxx" not understood
  	* [ ] Install script ???
  * [ ] Summarize shortcuts (cheatsheet)
  	* [ ] Perhaps including rationalization fos some decisions
- * Syntax definition improvements
+ * Syntax definition improvements (send some to upstream if they have not already been decided against there)
  	* Markdown
- 		* [ ] add `==`text`==` for highlighting (send to upstream)
+ 		* [ ] add `==`text`==` for highlighting
  		* [ ] codeblocks are a bit odd; see if I misunderstand their use of if they need tweaking
+ 		* [ ] add nicer (lower contrast) colors if code is in a link, e.g. `[`nano` homepage](https://url.url)` 
+ 		* [ ] improve anchor link display (higher constrast), e.g. `[top](#top)`
+
 
 ### Wishlist (not sure if possible)
 
