@@ -48,4 +48,4 @@ color yellow start="^```[^$]" end="^```$"
 color yellow "^```$"
 
 ## Trailing spaces
-color ,green "[[:space:]]+$"
+color ,black "[[:space:]]+$"
