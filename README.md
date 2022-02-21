@@ -18,7 +18,7 @@ I have commented out a bunch of syntax highlighting in `nanorc` that I do not an
 
 ### `nano`
 
-You need nano. Optimized for version `6.x`. 
+You need `nano`. Optimized for GNU `nano` version `6.x`. 
 
 Find your version number by typing `nano --version` into your terminal:
 
@@ -29,7 +29,8 @@ $ nano --version
  (C) 2014-2022 the contributors to nano
  Compiled options: --enable-utf8
 ```
-I have v. `6.2`. If you have version `5.x` or even lower some options will not work. In my experience, any incompatibilities will not prevent use of the program but you will be alerted. See [troubleshooting]("#troubleshooting") below. You can comment out lines of code that generate errors. 
+I have v. `6.2`. If you have version `5.x` or even lower, some options will not work. In my experience, any incompatibilities will not prevent use of the program but you will be alerted. See [troubleshooting]("#troubleshooting") below. You can comment out lines of code that generate errors. 
+Information is available about the differences between `nano` versions on the GNU `nano` website. For an overview, see [`IMPROVEMENTS`](https://nano-editor.org/dist/latest/IMPROVEMENTS). For more detail, see [`NEWS`](https://nano-editor.org/dist/latest/NEWS) and for the highest amount of detail there is the [`CHANGELOG`](https://nano-editor.org/dist/latest/ChangeLog)
 
 Consult [`nano`'s Download page](https://nano-editor.org/download.php) for install options but here is what I know. 
 
@@ -43,7 +44,7 @@ It is available via [`brew` package manager](https://brew.sh): `brew install nan
 
 Be aware that while `nano` does come included with the other command line tools on Mac OS, it is a very, very old version, if I recall correctly from the early 90s. This has to do with Apple's distaste for GPL-type liscences. So if you want to use that, there is no reason to bother with anything included here as it mostly will not work! My advice is to obtain a newer version, preferably via package manager as it will allow you to easily update to a newer version when available. 
 
-(General Mac OS terminal tip: *Many* (if not all) of the included tools are unusual variants that resemble the normal ones in most cases but will occasionally exhibit strange and frustrating behaviour. For example `grep` and even `ls`. The `brew` package manage can help to install standard versions in a safe non destructive way.)
+General Mac OS terminal tip: *Many* (if not all) of the included cli tools are unusual variants that resemble the normal ones in *most* cases but will occasionally exhibit strange and frustrating behaviour. For example `grep` and even `ls`. The `brew` package manage can help to install standard versions in a safe non destructive way.
 
 #### windows 
 
@@ -68,6 +69,8 @@ In the `nanorc`:
  * [ ] Spellchecking
  * [ ] Tidy up, remove old commented out configs
  	* [ ] Perhaps organize old configs into alternative "sets" of command keys, color shemes
+ * [ ] Make use of more keys I don't have on this particular device such as `del`, `pg up`/`pg dn` and `function` keys. 
+ * [ ] Improve color scheme
 
 In this repo:
 
@@ -76,8 +79,23 @@ In this repo:
  * [ ] Summarize shortcuts (cheatsheet)
  	* [ ] Perhaps including rationalization fos some decisions
 
+Wishlist (not sure if possible):
 
+ * [ ] Smarter word wrapping that doesn't cut words apart
+ * [ ] Change contents of the help menu at the bottom
+ * [ ] Keystroke to commit file to `git` repo
+ * [ ] Optimize keyboard shortcuts for markdown
 
+## helpful resources
+
+Official `nano` website
+
+ * [home page](https://nano-editor.org/)
+ * [cheatsheet](https://nano-editor.org/dist/latest/cheatsheet.html) - default keybindings and shortcuts (many won't work if you use my configs of course)
+ * [FAQ](https://nano-editor.org/dist/latest/faq.html) - answer many specific and technical problems users may encounter
+ * [`.nanorc`](https://nano-editor.org/dist/latest/nanorc.5.html) - reference for the `nanorc` files
+ * [user manual](https://nano-editor.org/dist/latest/nano.html)
+ * Note the above links will automatically display information for the "latest" release of `nano` as per the URL. If you require the information regarding a *specific* version, they are organized in [this directory](https://nano-editor.org/dist/). 
 
 
 
