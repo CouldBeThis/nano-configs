@@ -1,3 +1,7 @@
+---
+title: readme.md
+---
+
 # my nano configs
 
 A friendly configuration for `nano` text editor to make it intuitive for those who are not extremely framiliar with cli text editors. 
