@@ -82,6 +82,10 @@ Error in /home/youruser/.nanorc on line 149: Command "xxxxx" not understood
  	* [ ] Install script ???
  * [ ] Summarize shortcuts (cheatsheet)
  	* [ ] Perhaps including rationalization fos some decisions
+ * Syntax definition improvements
+ 	* Markdown
+ 		* [ ] add `==`text`==` for highlighting (send to upstream)
+ 		* [ ] codeblocks are a bit odd; see if I misunderstand their use of if they need tweaking
 
 ### Wishlist (not sure if possible)
 
