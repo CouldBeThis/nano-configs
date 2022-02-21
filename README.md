@@ -88,6 +88,13 @@ Wishlist (not sure if possible):
  * [ ] Change contents of the help menu at the bottom
  * [ ] Keystroke to commit file to `git` repo
  * [ ] Optimize keyboard shortcuts for markdown
+ 	* `ctrl` + `1` (and so on): add `#` to start of line (make heading level 1)
+ 	* add new list item at same indentation as current.
+ 		* if possible to detect whether currently in a list and what level, this should be automatic behaviour on `enter`
+ 		* if not, assign to some other keystroke
+ 		* also include for task list (` * [ ]` or ` - [ ]`)
+ 		* recognize either ` * ` or ` - ` lists
+ 	* make current selection, or if none selected, current word **bold**, *italic*, ~~strikethrough~~, ==highlighted==, `code`
  * [ ] Improved (less confusing) interaction bewteen terminal emulator and `nano`
 
 ## helpful resources
