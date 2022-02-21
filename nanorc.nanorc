@@ -46,4 +46,4 @@ icolor brightblue "^[[:space:]]*#.*$"
 icolor blue "^[[:space:]]*##.*$"
 
 ## Trailing whitespace
-icolor ,green "[[:space:]]+$"
+icolor ,black "[[:space:]]+$"
