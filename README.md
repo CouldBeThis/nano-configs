@@ -69,6 +69,7 @@ In the `nanorc`:
  * [ ] Spellchecking
  * [ ] Tidy up, remove old commented out configs
  	* [ ] Perhaps organize old configs into alternative "sets" of command keys, color shemes
+ 	* [ ] Perhaps split up files and `include` them in pieces
  * [ ] Make use of more keys I don't have on this particular device such as `del`, `pg up`/`pg dn` and `function` keys. 
  * [ ] Improve color scheme
 
