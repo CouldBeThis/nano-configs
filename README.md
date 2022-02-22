@@ -114,7 +114,7 @@ By default, the modifier keys on a Mac keyboard from the bottom left unti lthe s
 
 ### Wishlist (not sure if possible)
 
- * [ ] Smarter word wrapping that doesn't cut words apart
+ * [X] ~~Smarter word wrapping that doesn't cut words apart~~
  * [ ] Change contents of the help menu at the bottom
  * [ ] Keystroke to commit file to `git` repo
  * [ ] Optimize keyboard shortcuts for markdown

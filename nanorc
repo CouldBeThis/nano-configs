@@ -5,7 +5,11 @@ set linenumbers
 #set mouse
 set autoindent
 #set smooth
+
+## enable wrapping at spaces and tabs rather than cutting in the middle of a word 
 set softwrap
+set atblanks
+
 set tabsize 4
 
 ## Remember the used search/replace strings for the next session.
@@ -70,7 +74,7 @@ set scrollercolor lagoon,slate
 
 ## === Key bindings ===
 
-## MICROWAVE:
+## NETBOOK:
 ## 	^		=	ctrl
 ##	M-		=	alt
 ##	Sh-		=	shift
@@ -126,7 +130,7 @@ bind M-G gotoline all
 bind M-D zap main
 
 ## Let an unmodified Backspace or Delete erase the marked region (instead of a single character, and without affecting the cutbuffer).
-## does not work on MICROWAVE
+## does not work on NETBOOK
 set zap
 
 ## original
@@ -139,6 +143,12 @@ bind ^Z undo main
 #bind ^U undo main
 #bind ^E redo main
 #set multibuffer
+
+## remove shortcut to invoke linter
+unbind M-B all
+## remove shortcut to format/arrange/manipulate buffer
+unbind M-F all
+
 
 ## below installed and set up from https://github.com/scopatz/nanorc
 ## to install:
