@@ -1,10 +1,16 @@
 ## Please see the file README.md before using!
 
+## display line numbers on the left-hand side
 set linenumbers
-# set mouse does the opposite of what it sounds like.. unsets the mouse.
+
+##set mouse does the opposite of what it sounds like.. unsets the mouse. I preffer to 
+##leave it toggled off in the nanorc file. 
 #set mouse
+
+# Automatically indent a newly created line to the same number of tabs and/or spaces as 
+# the previous line (or as the next line if the previous line is the beginning of a 
+# paragraph).
 set autoindent
-#set smooth
 
 ## enable wrapping at spaces and tabs rather than cutting in the middle of a word 
 set softwrap
