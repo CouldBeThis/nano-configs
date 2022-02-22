@@ -25,6 +25,9 @@ set tabsize 4
 ## Display a "scrollbar" on the righthand side of the edit window.
 set indicator
 
+## Draw a vertical stripe at the given column, to help judge the width of the text.  (The color of the stripe can be changed with set stripecolor.)
+set guidestripe 72
+
 ## Save the cursor position of files between editing sessions. The cursor position is 
 ## remembered for the 200 most-recently edited files.
 set positionlog
@@ -51,7 +54,7 @@ set speller hunspell
 #set numbercolor blue
 #set titlecolor magenta,rosy
 #set numbercolor sky,sea
-set numbercolor sea
+set numbercolor sea		
 set titlecolor sea,black
 set minicolor bold,black,mauve
 #set titlecolor tawny,beet
