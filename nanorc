@@ -99,7 +99,7 @@ set scrollercolor lagoon,slate
 ## ctrl + backspace = delete entire word to the left
 bind ^H chopwordleft main
 
-bind ^X exit all
+bind ^Q exit all
 bind ^S savefile main
 #bind ^W writeout main
 #bind ^O insert main
@@ -112,10 +112,10 @@ bind ^G findnext all
 bind ^R replace main
 #bind M-X flipnewbuffer all
 unbind M-X all
-bind M-X cut all
-bind M-C copy all
-bind M-V paste all
-bind ^P location main
+bind ^X cut all
+bind ^C copy all
+bind ^V paste all
+#bind ^P location main
 bind ^A mark main
 #unbind ^K main
 #unbind ^U all
