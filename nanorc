@@ -99,7 +99,7 @@ set scrollercolor lagoon,slate
 ## ctrl + backspace = delete entire word to the left
 bind ^H chopwordleft main
 
-bind ^Q exit all
+bind ^X exit all
 bind ^S savefile main
 #bind ^W writeout main
 #bind ^O insert main
@@ -111,10 +111,15 @@ bind ^G findnext all
 #bind ^D findprevious all
 bind ^R replace main
 #bind M-X flipnewbuffer all
+
 unbind M-X all
 bind ^X cut all
 bind ^C copy all
 bind ^V paste all
+## nano will not start if ^C is bound to something other than the default unless cancel in yesno menu has a new binding assigned to it
+bind ^C cancel yesno
+
+
 #bind ^P location main
 bind ^A mark main
 #unbind ^K main
