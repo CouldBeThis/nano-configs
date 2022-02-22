@@ -36,7 +36,7 @@ set positionlog
 #set minibar
 
 ## Use the top-right corner of the screen for showing some state flags: I when auto-indenting, M when the mark is on, L when hard-wrapping (breaking long lines), R when recording a macro, and S when soft-wrapping. When the buffer is modified, a star (*) is shown after the filename in the center of the title bar. 
-#set stateflags
+set stateflags
 
 set speller hunspell
 
