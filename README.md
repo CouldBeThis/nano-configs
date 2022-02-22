@@ -100,7 +100,7 @@ By default, the modifier keys on a Mac keyboard from the bottom left unti lthe s
  		* [ ] improve anchor link display (higher constrast), e.g. `[top](#top)`
  		* [ ] escape charecters
  		* [ ] `YAML` frontmatter
- * [ ] on Mac: `M-`+ arrows activates linter.. why?
+ * [X] ~~on Mac: `M-`+ arrows activates linter.. why?~~
 
 
 ### In this repo
