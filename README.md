@@ -62,6 +62,25 @@ Error in /home/youruser/.nanorc on line 149: Command "xxxxx" not understood
 ```
  so you can open nano and go to that line and inspect it, fix it or just prepend with `#` to comment it out.
 
+### hints: Mac OS
+
+For best experience on the Mac, I reccomend using [iTerm2](https://iterm2.com/index.html) rather than the standard terminal application th comes with the system. [kitty](https://sw.kovidgoyal.net/kitty/) is another popular optionbut requires more advanced configuration to make it useful to begin with. 
+
+On my system I had to do some extra configuring in iTerm2 in order to get the keybindings to work properly. I am not sure if this has to do with changes I made previously, or if it could be the case with just default settings. 
+
+Documentation on how to modify keybindings in iTerm2 can be found [in its documentation](https://iterm2.com/documentation-preferences-profiles-keys.html). I followed the instructions to go to `Preferences` > `Profiles` > `Keys` > `General`:
+
+> Left/Right Option Key Acts As
+>
+> It is common to use a modifier to send so-called "meta keys". For most users, selecting "+Esc" here is the right choice. The "Meta" option sets the high bit of the input character, and is not compatible with modern systems.
+
+By default, the modifier keys on a Mac keyboard from the bottom left unti lthe spacebar are: `⌃` `⌥` `⌘` these being:
+
+ * `⌃` - `control` - this is the modifier that does most of the work by default in `nano`; key combinations should work as expected when identified such as `^X` to exit
+ * `⌥` - `option` - if you make the configuration as specified, this should be the modifier `M-`
+ * `⌘` - command - should not be assigned any `nano` powers, leaving it for control of the external environment like terminal editor.
+
+
 ## todo
 
 ### In the `nanorc` and `.nanorc` files
@@ -81,7 +100,7 @@ Error in /home/youruser/.nanorc on line 149: Command "xxxxx" not understood
  		* [ ] improve anchor link display (higher constrast), e.g. `[top](#top)`
  		* [ ] escape charecters
  		* [ ] `YAML` frontmatter
-
+ * [ ] on Mac: `M-`+ arrows activates linter.. why?
 
 
 ### In this repo
