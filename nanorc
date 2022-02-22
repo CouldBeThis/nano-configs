@@ -55,7 +55,8 @@ set speller hunspell
 #set titlecolor magenta,rosy
 #set numbercolor sky,sea
 set numbercolor sea		
-set titlecolor sea,black
+#set titlecolor sea,black
+set titlecolor teal,pink
 set minicolor bold,black,mauve
 #set titlecolor tawny,beet
 
