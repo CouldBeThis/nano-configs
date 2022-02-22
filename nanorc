@@ -12,7 +12,8 @@ set linenumbers
 # paragraph).
 set autoindent
 
-## enable wrapping at spaces and tabs rather than cutting in the middle of a word 
+## enable wrapping (softwrap) at spaces and tabs rather than cutting in the middle of a 
+## word (atblanks)
 set softwrap
 set atblanks
 
@@ -24,14 +25,15 @@ set tabsize 4
 ## Display a "scrollbar" on the righthand side of the edit window.
 set indicator
 
-## Save the cursor position of files between editing sessions. The cursor position is remembered for the 200 most-recently edited files. 
+## Save the cursor position of files between editing sessions. The cursor position is 
+## remembered for the 200 most-recently edited files.
 set positionlog
 
 ## Make the Home key smarter. When Home is pressed anywhere but at the very beginning of non-whitespace characters on a line, the cursor will jump to that beginning (either forwards or backwards). If the cursor is already at that position, it will jump to the true beginning of the line.
 #set smarthome
 
 ## Suppress the title bar and instead show information about the current buffer at the bottom of the screen, in the space for the status bar. 
-set minibar
+#set minibar
 
 ## Use the top-right corner of the screen for showing some state flags: I when auto-indenting, M when the mark is on, L when hard-wrapping (breaking long lines), R when recording a macro, and S when soft-wrapping. When the buffer is modified, a star (*) is shown after the filename in the center of the title bar. 
 set stateflags
