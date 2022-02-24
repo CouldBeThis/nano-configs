@@ -70,7 +70,7 @@ set scrollercolor lagoon,slate
 
 ## === Key bindings ===
 
-## MICROWAVE:
+## NETBOOK:
 ## 	^		=	ctrl
 ##	M-		=	alt
 ##	Sh-		=	shift
@@ -126,7 +126,7 @@ bind M-G gotoline all
 bind M-D zap main
 
 ## Let an unmodified Backspace or Delete erase the marked region (instead of a single character, and without affecting the cutbuffer).
-## does not work on MICROWAVE
+## does not work on NETBOOK
 set zap
 
 ## original
