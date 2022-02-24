@@ -94,7 +94,7 @@ bind ^S savefile main
 bind M-H help all
 bind M-H exit help
 bind M-F whereis all
-bind M-Sh-G findnext all
+bind Sh-M-F findnext all
 #bind ^B wherewas all
 #bind ^D findprevious all
 bind M-R replace main
