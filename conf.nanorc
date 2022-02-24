@@ -8,4 +8,4 @@ icolor white ""(\\.|[^"])*""
 icolor brightblue "^[[:space:]]*#.*$"
 icolor cyan "^[[:space:]]*##.*$"
 ## Trailing spaces
-color ,green "[[:space:]]+$"
+color ,black "[[:space:]]+$"
