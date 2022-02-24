@@ -6,6 +6,6 @@ syntax "Conf" "\.c[o]?nf$"
 icolor white ""(\\.|[^"])*""
 ## Comments
 icolor brightblue "^[[:space:]]*#.*$"
-icolor cyan "^[[:space:]]*##.*$"
+icolor blue "^[[:space:]]*##.*$"
 ## Trailing spaces
 color ,black "[[:space:]]+$"
