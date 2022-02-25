@@ -41,7 +41,7 @@ set speller hunspell
 #set numbercolor sky,sea
 set numbercolor sea
 set titlecolor sea,black
-set minicolor bold,black,mauve
+set minicolor bold,black,lagoon
 #set titlecolor tawny,beet
 
 ## Use bold instead of reverse video for the title bar, status bar, key combos, function tags, line numbers, and selected text
