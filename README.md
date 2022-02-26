@@ -152,21 +152,19 @@ By default, the modifier keys on a Mac keyboard from the bottom left unti lthe s
  		* [ ] improve anchor link display (higher constrast), e.g. `[top](#top)`
  		* [ ] escape charecters
  		* [ ] `YAML` frontmatter
-<<<<<<< HEAD
  * [X] ~~on Mac: `M-`+ arrows activates linter.. why?~~
-=======
-
->>>>>>> 10d300d (update readme: markdown syntax improvements)
+ * [ ] Move syntax changes that are just for myself to using `extendsyntax` and keep the main files general-purpose
 
 
 ### In this repo
 
- * [ ] Organize files so it's clear what belongs to be and what belongs to the `scopatz/nanorc` repo
- 	* [ ] Perhaps include as a (forked) submodule
- * [ ] Install instructions
+ * [x] ~~Organize files so it's clear what belongs to be and what belongs to the `scopatz/nanorc` repo~~
+ 	* [x] ~~Perhaps include as a (forked) submodule~~
+ * [x] ~~Install instructions~~
  	* [ ] Install script ???
  * [ ] Summarize shortcuts (cheatsheet)
  	* [ ] Perhaps including rationalization fos some decisions
+ * [ ] Move this list to github issues?
 
 ### Wishlist (not sure if possible)
 
