@@ -1,10 +1,12 @@
 
 
-##set mouse does the opposite of what it sounds like.. unsets the mouse. I preffer to leave it toggled off in the nanorc file. 
-#set mouse
 
-## Remember the used search/replace strings for the next session.
-#set historylog
+############### MISC BEHAVIOR ##################
+## . . . . . . . . . . . . . . . . . . . . . .##
+##
+
+##set mouse seems to toggle certain mouse abilities on while others off; doesn't jive with documentation
+#set mouse
 
 ## Save the cursor position of files between editing sessions. The cursor position is 
 ## remembered for the 200 most-recently edited files.
@@ -18,17 +20,6 @@ set positionlog
 
 ## Scroll the buffer contents per half-screen instead of per line.
 #set jumpyscrolling
-## ,,,,,;;;;;]]]]]/////|\\\\\[[[[[[;;;;;,,,,, ##
-################################################
-## . . . . . . . . . . . . . . . . . . . . . .##
-##
-
-## ,,,,,;;;;;]]]]]/////|\\\\\[[[[[[;;;;;,,,,, ##
-## zzzzzzzzzziiiiiiiiiiooooooooootttttttttt999##
-################################################
-## . . . . . . . . . . . . . . . . . . . . . .##
-##
-
 
 ################## TEXT FLOW ###################
 ## . . . . . . . entire screen . . . . . . . .##
@@ -42,10 +33,10 @@ set softwrap
 set atblanks
 
 ## Don’t hard-wrap text at all. used to be called "set nowrap"
+## (documentation is unclear about the meaning of this option)
 #unset breaklonglines
 
-
-################# SELECTIONS ############################
+################# SELECTIONS ###################
 ## . . text flow on a word-by-word basis . . .##
 ##
 
@@ -61,12 +52,19 @@ set atblanks
 ## Set the characters treated as closing punctuation when justifying paragraphs. This may not include blank characters. Only the specfified closing punctuation, optionally followed by closing brackets (see brackets), can end sentences. The default value is "!.?".
 #set punct "characters"
 
-## ,,,,,;;;;;]]]]]/////|\\\\\[[[[[[;;;;;,,,,, ##
 ################ FIND & REPLACE ################
 ## . . . . . . . . . . . . . . . . . . . . . .##
 ##
 
-## ,,,,,;;;;;]]]]]/////|\\\\\[[[[[[;;;;;,,,,, ##
+## Do case-sensitive searches by default
+#set casesensitive
+
+## Remember the used search/replace strings for the next session.
+#set historylog
+
+## Do regular-expression searches by default. Regular expressions in nano are of the extended type (ERE).
+#set regexp
+
 ############## KEYBOARD INTERFACE ##############
 ## . . . . . . . . . . . . . . . . . . . . . .##
 ##
@@ -96,8 +94,8 @@ set zap
 ## Interpret the Delete and Backspace keys differently so that both Backspace and Delete work properly. You should only use this option when on your system either Backspace acts like Delete or Delete acts like Backspace.
 # set rebinddelete
 
-## ,,,,,;;;;;]]]]]/////|\\\\\[[[[[[;;;;;,,,,, ##
-################## KEYBINDINGS #################
+
+################# KEYBINDINGS ##################
 ## . . . . . . . . . . . . . . . . . . . . . .##
 ##
 
@@ -210,8 +208,8 @@ set indicator
 ## Hide all elements of the interface (title bar, status bar, and help lines) and use all rows of the terminal for showing the contents of the buffer. The status bar appears only when there is a significant message, and disappears after 1.5 seconds or upon the next keystroke. With M−Z the title bar plus status bar can be toggled. With M−X the help lines.
 # set zero
 
-## ,,,,,;;;;;]]]]]/////|\\\\\[[[[[[;;;;;,,,,, ##
-#################### COLORS ####################
+
+################### COLORS #####################
 ## . . . . . . . . . . . . . . . . . . . . . .##
 ##
 ## see notes at https://github.com/CouldBeThis/nano-configs/blob/main/templates/colors.nanorc
@@ -270,12 +268,11 @@ set functioncolor sea
 ## Shortcut key combos
 set keycolor sky
 
-################# end COLORS ##################
 
-## ,,,,,;;;;;]]]]]/////|\\\\\[[[[[[;;;;;,,,,, ##
-
-## below installed and set up from https://github.com/scopatz/nanorc
-## see this repo's readme for instructions on how to make use of them
+############# SYNTAX HIGHLIGHTING ##############
+## . . . . . . . . . . . . . . . . . . . . . .##
+## below were originally installed and set up from https://github.com/scopatz/nanorc
+## see readme for instructions on how to make use of them
 
 include "nanorc-syntax/apacheconf.nanorc"
 include "nanorc-syntax/arduino.nanorc"
@@ -369,4 +366,8 @@ include "nanorc-syntax/yum.nanorc"
 include "nanorc-syntax/zsh.nanorc"
 include "nanorc-syntax/gitignore.nanorc"
 
+## ,,,,,;;;;;]]]]]/////|\\\\\[[[[[[;;;;;,,,,, ##
+################################################
+## . . . . . . . . . . . . . . . . . . . . . .##
+##
 ## ,,,,,;;;;;]]]]]/// eof \\\[[[[[[;;;;;,,,,, ##
