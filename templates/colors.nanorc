@@ -1,6 +1,18 @@
 ################ TEMPLATE for #################
 ## . . . . . .NANORC (colors only). . . . . . #
 ##
+## Documentation here: https://nano-editor.org/dist/latest/nanorc.5.html
+## The below is based on that document with some changes:
+##
+## BASIC COLORS: Valid names for the foreground and background colors are: red, green, blue, magenta, yellow, cyan, white, and black. Each of these eight names may be prefixed with the word light to get a brighter version of that color. The word grey or gray may be used as a synonym for lightblack. Also available is normal, which means the default foreground or background color.
+##
+## NOTE: Terminal emulators with "themes", color schemes or other changes made to the colors: The ABOVE colors will follow your theme, however the BELOW colors and other arbitrarily-defined colors will NOT. Therefor if you combine colors from the above and the below, you may end up with unintended combinations.
+##
+## FANCY COLORS: On terminal emulators that can do at least 256 colors, other valid (but unprefixable) color names are: beet, brick, brown, crimson, lagoon, latte, lime, mauve, mint, ocher, orange, peach, pink, plum, purple, rosy, sage, sand, sea, sky, slate, tawny and teal.
+##
+## On such emulators, the color may also be specified as a three-digit hexadecimal number prefixed with #, with the digits representing the amounts of red, green, and blue, respectively. This tells nano to select from the available palette the color that approximates the given values.
+##
+##
 ## - - - - - - Top edge of window  - - - - - ##
 ##
 ## titlebar 
