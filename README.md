@@ -132,6 +132,9 @@ By default, the modifier keys on a Mac keyboard from the bottom left unti lthe s
  * `⌥` - `option` - if you make the configuration as specified, this should be the modifier `M-`
  * `⌘` - command - should not be assigned any `nano` powers, leaving it for control of the external environment like terminal editor.
 
+## about editing and making your own files
+
+See [`nano-configs/templates/colors.nanorc`](https://github.com/CouldBeThis/nano-configs/blob/main/templates/colors.nanorc) for notes about colors.
 
 ## todo
 
