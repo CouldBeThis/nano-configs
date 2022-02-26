@@ -1,15 +1,7 @@
-## Detect word boundaries differently by treating punctuation characters as parts of words.
-# set wordbounds
 
-## Specify which other characters (besides the normal alphanumeric ones) should be considered as parts of words. When using this option, you probably want to unset wordbounds.
-# set wordchars "characters"
 
 ##set mouse does the opposite of what it sounds like.. unsets the mouse. I preffer to leave it toggled off in the nanorc file. 
 #set mouse
-
-## enable wrapping (softwrap) at spaces and tabs rather than cutting in the middle of a word (atblanks)
-set softwrap
-set atblanks
 
 ## Remember the used search/replace strings for the next session.
 #set historylog
@@ -21,46 +13,81 @@ set positionlog
 ## When reading in a file with ^R, insert it into a new buffer by default.
 #set multibuffer
 
+## When neither the file’s name nor its first line give a clue, try using libmagic to determine the applicable syntax. (Calling libmagic can be relatively time consuming. It is therefore not done by default.)
+#set magic
+
+## Scroll the buffer contents per half-screen instead of per line.
+#set jumpyscrolling
+## ,,,,,;;;;;]]]]]/////|\\\\\[[[[[[;;;;;,,,,, ##
+################################################
+## . . . . . . . . . . . . . . . . . . . . . .##
+##
+
+## ,,,,,;;;;;]]]]]/////|\\\\\[[[[[[;;;;;,,,,, ##
+## zzzzzzzzzziiiiiiiiiiooooooooootttttttttt999##
 ################################################
 ## . . . . . . . . . . . . . . . . . . . . . .##
 ##
 
 
-
-################################################
-## . . . . . . . . . . . . . . . . . . . . . .##
+################## TEXT FLOW ###################
+## . . . . . . . entire screen . . . . . . . .##
 ##
 
+## Set the target width for justifying and automatic hard-wrapping at this number of columns. If the value is 0 or less, wrapping will occur at the width of the screen minus number columns, allowing the wrap point to vary along with the width of the screen if the screen is resized. The default value is −8.
+#set fill number
+
+## enable wrapping (softwrap) at spaces and tabs rather than cutting in the middle of a word (atblanks)
+set softwrap
+set atblanks
+
+## Don’t hard-wrap text at all. used to be called "set nowrap"
+#unset breaklonglines
 
 
-################################################
-## . . . . . . . . . . . . . . . . . . . . . .##
+################# SELECTIONS ############################
+## . . text flow on a word-by-word basis . . .##
 ##
 
+##Set the regular expression for matching the quoting part of a line. The default value is "^([ \t]*([!#%:;>|}]|//))+". (Note that \t stands for an actual Tab character.) This makes it possible to rejustify blocks of quoted text when composing email, and to rewrap blocks of line comments when writing source code.
+# set quotestr "regex"
 
+## Detect word boundaries differently by treating punctuation characters as parts of words.
+# set wordbounds
 
-################################################
-## . . . . . . . . . . . . . . . . . . . . . .##
-##
+## Specify which other characters (besides the normal alphanumeric ones) should be considered as parts of words. When using this option, you probably want to unset wordbounds.
+#set wordchars "characters"
 
+## Set the characters treated as closing punctuation when justifying paragraphs. This may not include blank characters. Only the specfified closing punctuation, optionally followed by closing brackets (see brackets), can end sentences. The default value is "!.?".
+#set punct "characters"
+
+## ,,,,,;;;;;]]]]]/////|\\\\\[[[[[[;;;;;,,,,, ##
 ################ FIND & REPLACE ################
 ## . . . . . . . . . . . . . . . . . . . . . .##
 ##
 
+## ,,,,,;;;;;]]]]]/////|\\\\\[[[[[[;;;;;,,,,, ##
 ############## KEYBOARD INTERFACE ##############
 ## . . . . . . . . . . . . . . . . . . . . . .##
 ##
+
+## Use cut-from-cursor-to-end-of-line by default, instead of cutting the whole line.
+#set cutfromcursor
 
 # Automatically indent a newly created line to the same number of tabs and/or spaces as 
 # the previous line (or as the next line if the previous line is the beginning of a 
 # paragraph).
 set autoindent
 
+## Convert each typed tab to spaces -- to the number of spaces that a tab at that position would take up.
+#set tabstospaces
 set tabsize 4
+
+## Make Ctrl+Right and Ctrl+Delete stop at word ends instead of beginnings.
+#set afterends
 
 ## Make the Home key smarter. When Home is pressed anywhere but at the very beginning of non-whitespace characters on a line, the cursor will jump to that beginning (either forwards or backwards). If the cursor is already at that position, it will jump to the true beginning of the line.
 #set smarthome
-
 
 ## Let an unmodified Backspace or Delete erase the marked region (instead of a single character, and without affecting the cutbuffer).
 ## does not work on NETBOOK
@@ -69,6 +96,7 @@ set zap
 ## Interpret the Delete and Backspace keys differently so that both Backspace and Delete work properly. You should only use this option when on your system either Backspace acts like Delete or Delete acts like Backspace.
 # set rebinddelete
 
+## ,,,,,;;;;;]]]]]/////|\\\\\[[[[[[;;;;;,,,,, ##
 ################## KEYBINDINGS #################
 ## . . . . . . . . . . . . . . . . . . . . . .##
 ##
@@ -167,7 +195,22 @@ set indicator
 ## Use the top-right corner of the screen for showing some state flags: I when auto-indenting, M when the mark is on, L when hard-wrapping (breaking long lines), R when recording a macro, and S when soft-wrapping. When the buffer is modified, a star (*) is shown after the filename in the center of the title bar. 
 #set stateflags
 
+## Set the two characters used to indicate the presence of tabs and spaces. They must be single-column characters. The default pair for a UTF-8 locale is "»⋅", and for other locales ">.".
+#set whitespace "characters"
 
+## Constantly display the cursor position in the status bar. This overrides the option quickblank.
+#set constantshow
+
+## Don’t display the two help lines at the bottom of the screen.
+#set nohelp
+
+## Make status-bar messages disappear after 1 keystroke instead of after 20. Note that option constantshow overrides this. When option minibar or zero is in effect, quickblank makes a message disappear after 0.8 seconds instead of after the default 1.5 seconds.
+# set quickblank
+
+## Hide all elements of the interface (title bar, status bar, and help lines) and use all rows of the terminal for showing the contents of the buffer. The status bar appears only when there is a significant message, and disappears after 1.5 seconds or upon the next keystroke. With M−Z the title bar plus status bar can be toggled. With M−X the help lines.
+# set zero
+
+## ,,,,,;;;;;]]]]]/////|\\\\\[[[[[[;;;;;,,,,, ##
 #################### COLORS ####################
 ## . . . . . . . . . . . . . . . . . . . . . .##
 ##
@@ -229,6 +272,7 @@ set keycolor sky
 
 ################# end COLORS ##################
 
+## ,,,,,;;;;;]]]]]/////|\\\\\[[[[[[;;;;;,,,,, ##
 
 ## below installed and set up from https://github.com/scopatz/nanorc
 ## see this repo's readme for instructions on how to make use of them
@@ -324,3 +368,5 @@ include "nanorc-syntax/yaml.nanorc"
 include "nanorc-syntax/yum.nanorc"
 include "nanorc-syntax/zsh.nanorc"
 include "nanorc-syntax/gitignore.nanorc"
+
+## ,,,,,;;;;;]]]]]/// eof \\\[[[[[[;;;;;,,,,, ##
