@@ -201,7 +201,7 @@ Official `nano` website
  * [`.nanorc`](https://nano-editor.org/dist/latest/nanorc.5.html) - reference for the `nanorc` files
  * [user manual](https://nano-editor.org/dist/latest/nano.html)
  * Note the above links will automatically display information for the "latest" release of `nano` as per the URL. If you require the information regarding a *specific* version, they are organized in [this directory](https://nano-editor.org/dist/). 
-
+ * [Enable Syntax Highlighting and Colors in nano](https://factorpad.com/tech/full-stack/nano-syntax-highlighting.html) - simple tutorial
 
 
 
