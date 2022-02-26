@@ -246,7 +246,7 @@ set scrollercolor lagoon,slate
 set selectedcolor bold,mauve,black
 ##
 ## Highlighting a search match
-set spotlightcolor 
+set spotlightcolor italic,white,brick
 ##
 ## For the prompt bar (default = titlecolor)
 # set promptcolor 
@@ -254,13 +254,13 @@ set spotlightcolor
 ## - - - - - Bottom edge of window - - - - - ##
 
 ## Status bar when an error message is displayed
-set errorcolor 
+set errorcolor bold,mauve,white
 ##
 ## For the minibar (default = titlecolor)
 # set minicolor bold,black,mauve
 ##
 ## For the status bar
-set statuscolor 
+set statuscolor white,lagoon
 ##
 ## Help lines at bottom of screen
 ## Shortcut descriptions
