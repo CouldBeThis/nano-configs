@@ -12,7 +12,10 @@
 ##
 ## On such emulators, the color may also be specified as a three-digit hexadecimal number prefixed with #, with the digits representing the amounts of red, green, and blue, respectively. This tells nano to select from the available palette the color that approximates the given values.
 ##
-##
+## FORMAT
+## set ELEMENT [bold,][italic,]fgcolor,bgcolor
+##    * if only one color is given, will be fgcolor
+## * NO SPACE after comma!
 ## - - - - - - Top edge of window  - - - - - ##
 ##
 ## titlebar 
