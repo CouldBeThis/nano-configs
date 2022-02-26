@@ -16,6 +16,12 @@
 ## set ELEMENT [bold,][italic,]fgcolor,bgcolor
 ##    * if only one color is given, will be fgcolor
 ## * NO SPACE after comma!
+
+## - - - - - - All edges of window  - - - - - ##
+##
+## Use bold instead of reverse video for the title bar, status bar, key combos, function tags, line numbers, and selected text (toggled on if uncommented, does not take any colors)
+# set boldtext
+
 ## - - - - - - Top edge of window  - - - - - ##
 ##
 ## titlebar 
