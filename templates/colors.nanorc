@@ -1,9 +1,12 @@
-## - - - - - Top edge of window - - - - - ##
+################ TEMPLATE for #################
+## . . . . . .NANORC (colors only). . . . . . #
+##
+## - - - - - - Top edge of window  - - - - - ##
 ##
 ## titlebar 
 set titlecolor 
 
-## - - - - - Vertical elements - - - - - ##
+## - - - - - - Vertical elements - - - - - - ##
 ##
 ## Line numbers
 set numbercolor 
@@ -14,7 +17,7 @@ set scrollercolor
 ## For the vertical guiding stripe. 
 # set stripecolor 
 
-## - - - - - Text editing area - - - - - ##
+## - - - - - - Text editing area - - - - - - ##
 ##
 ## Selected text
 set selectedcolor
@@ -42,8 +45,7 @@ set functioncolor
 ## Shortcut key combos
 set keycolor 
 
-
-
+################# end COLORS ##################
 
 
 
