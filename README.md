@@ -8,6 +8,50 @@ Takes advantage of modern terminals with many colors.
 
 Work in progress and for my own purposes. Proceed with caution. Feel free to open an issue if the mood strikes you for some reason. 
 
+## quickstart
+
+see also "Requirements" below.
+
+### where the files go
+
+This repo and the submodule for syntax files will typically go in your `$HOME`. Depending on preferences and system this will likely be either `~/.nano` or `~/.config/nano`.
+
+See also the [`NANORC(5)` docs](https://nano-editor.org/dist/latest/nanorc.5.html#DESCRIPTION).
+
+### prefered: clone the repo
+
+To clone this repo *and* the submodule containing the syntax files, you must use recursive clone. Choose whichever is more appropriate. Both of these is set to send the files to `~.config/nano/` but you may change the command or move them to another directory that works for you. `git` will *not* over-write any existing file, it will produce an error. If you have `nano` configurations in another location, it may read those first (see troubleshooting, below)
+
+**option 1:** using unauthenticated `https` (no github account set up in the terminal):
+
+```sh
+git clone --recurse-submodules https://github.com/CouldBeThis/nano-configs.git ~/.config/nano
+```
+
+**option 2:** using authenticated `ssh` (github account authenticated in terminal):
+
+```sh
+git clone --recurse-submodules git@github.com:CouldBeThis/nano-configs.git ~/.config/nano
+```
+
+#### updating
+
+enter the repo directory (for example `~/.config/nano`) and run `git pull`
+
+### alternative: download the zips (via web)
+
+not a smooth way to go. 
+
+1. In the top right area of this page there is a button called `Code`, click that to open a menu and select "Download Zip". Extract the `.zip` into your target directory.
+
+2. Go to the [nanorc-syntax](https://github.com/CouldBeThis/nanorc-syntax) repo and also download that `.zip`
+
+3. Extract the `.zip` from step #2 *into the empty directory of the same name* from Step 1.
+
+#### updating
+
+??? you will have to repeat the steps above. if you made any changes yourself you will have to manually compare the files. It is unideal.
+
 ## syntax highlighting
 
 I have installed and am relying on filetype syntax highlighting obtained from [scopatz/nanorc](https://github.com/scopatz/nanorc). I did this on a prior version of `nano` and it may not be neccissary anymore. I have made a couple of small changes here and there to suit myself and will probbably do more of the same which is why I keep them. If you want to use the defaults from that repo or from the application, I do not think you would have any problems. 
@@ -44,13 +88,21 @@ It is available via [`brew` package manager](https://brew.sh): `brew install nan
 
 Be aware that while `nano` does come included with the other command line tools on Mac OS, it is a very, very old version, if I recall correctly from the early 90s. This has to do with Apple's distaste for GPL-type liscences. So if you want to use that, there is no reason to bother with anything included here as it mostly will not work! My advice is to obtain a newer version, preferably via package manager as it will allow you to easily update to a newer version when available. 
 
-General Mac OS terminal tip: *Many* (if not all) of the included cli tools are unusual variants that resemble the normal ones in *most* cases but will occasionally exhibit strange and frustrating behaviour. For example `grep` and even `ls`. The `brew` package manage can help to install standard versions in a safe non destructive way.
+General Mac OS terminal tip: *Many* (if not all) of the included cli tools are unusual variants that resemble the normal ones in *most* cases but will occasionally exhibit strange and frustrating behaviour. For example `grep`, `sort` and even `ls`. The `brew` package manage can help to install standard versions in a safe non destructive way. 
 
 #### windows 
 
 I am not sure about how this works on windows which I do not use. :(
 
 ## troubleshooting
+
+### `nano` ignores configurations
+
+from [`NANORC(5)` docs](https://nano-editor.org/dist/latest/nanorc.5.html#DESCRIPTION):
+
+> The nanorc files contain the default settings for nano, a small and friendly editor. During startup, if −−rcfile is not given, nano will read two files: first the system-wide settings, from /etc/nanorc (the exact path might be different on your system), and then the user-specific settings, either from ~/.nanorc or from $XDG_CONFIG_HOME/nano/nanorc or from ~/.config/nano/nanorc, whichever is encountered first. If −−rcfile is given, nano will read just the specified settings file.
+
+### errors
 
 You will be alerted to errors in 2 ways:
 
