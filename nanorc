@@ -2,17 +2,12 @@
 ##leave it toggled off in the nanorc file. 
 #set mouse
 
-# Automatically indent a newly created line to the same number of tabs and/or spaces as 
-# the previous line (or as the next line if the previous line is the beginning of a 
-# paragraph).
-set autoindent
+
 
 ## enable wrapping (softwrap) at spaces and tabs rather than cutting in the middle of a 
 ## word (atblanks)
 set softwrap
 set atblanks
-
-set tabsize 4
 
 ## Remember the used search/replace strings for the next session.
 #set historylog
@@ -28,15 +23,28 @@ set positionlog
 
 set speller hunspell
 
-################## KEYBINDINGS #################
-## . . . . .  & Keyboard interface . . . . . .##
+############## KEYBOARD INTERFACE ##############
+## . . . . . . . . . . . . . . . . . . . . . .##
 ##
+
+# Automatically indent a newly created line to the same number of tabs and/or spaces as 
+# the previous line (or as the next line if the previous line is the beginning of a 
+# paragraph).
+set autoindent
+
+set tabsize 4
 
 ## Make the Home key smarter. When Home is pressed anywhere but at the very beginning of non-whitespace characters on a line, the cursor will jump to that beginning (either forwards or backwards). If the cursor is already at that position, it will jump to the true beginning of the line.
 #set smarthome
 
 
-## === Key bindings ===
+## Let an unmodified Backspace or Delete erase the marked region (instead of a single character, and without affecting the cutbuffer).
+## does not work on NETBOOK
+set zap
+
+################## KEYBINDINGS #################
+## . . . . . . . . . . . . . . . . . . . . . .##
+##
 
 ## NETBOOK:
 ## 	^		=	ctrl
@@ -51,10 +59,6 @@ set speller hunspell
 ##    Sh-M-X —— where X is a Latin letter. Example: Sh-M-U. By default, each Meta+letter keystroke does the same as the corresponding Shift+Meta+letter. But when any Shift+Meta bind is made, that will no longer be the case, for all letters.
 ##    Fn —— where n is a numeric value from 1 to 24. Example: F10. (Often, F13 to F24 can be typed as F1 to F12 with Shift.)
 ##    Ins or Del. 
-
-## Let an unmodified Backspace or Delete erase the marked region (instead of a single character, and without affecting the cutbuffer).
-## does not work on NETBOOK
-set zap
 
 ## ctrl + backspace = delete entire word to the left
 bind ^H chopwordleft main
@@ -107,11 +111,11 @@ bind M-D zap main
 ##bind M-R redo main
 unbind ^Z all
 bind ^Z undo main
-## disabled because it produces the error of being "invalid" (gallium)
+## disabled because it produces the error of being "invalid" (NETBOOK)
 #bind M^Z redo main
 #bind ^U undo main
 #bind ^E redo main
-#set multibuffer
+
 
 ## remove shortcut to invoke linter
 unbind M-B all
