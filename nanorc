@@ -124,7 +124,7 @@ unbind M-B all
 unbind M-F all
 
 ################### INTERFACE ##################
-## . . . . .  . . . . . . . . . . . . . . . . .#
+## . . . . .  . . . . VISUAL . . . . . . . . .##
 
 ## display line numbers on the left-hand side
 set linenumbers
@@ -143,7 +143,7 @@ set indicator
 
 
 #################### COLORS ####################
-## . . . . . . . . . . . . . . . . . . . . . . #
+## . . . . . . . . . . . . . . . . . . . . . .##
 ##
 ## see notes at https://github.com/CouldBeThis/nano-configs/blob/main/templates/colors.nanorc
 ##
