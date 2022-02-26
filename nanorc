@@ -25,17 +25,15 @@ set tabsize 4
 ## remembered for the 200 most-recently edited files.
 set positionlog
 
-## Make the Home key smarter. When Home is pressed anywhere but at the very beginning of non-whitespace characters on a line, the cursor will jump to that beginning (either forwards or backwards). If the cursor is already at that position, it will jump to the true beginning of the line.
-#set smarthome
-
-
-
-
 
 set speller hunspell
 
 ################## KEYBINDINGS #################
-## . . . . .  . . . . . . .  . . . . . . . . .##
+## . . . . .  & Keyboard interface . . . . . .##
+##
+
+## Make the Home key smarter. When Home is pressed anywhere but at the very beginning of non-whitespace characters on a line, the cursor will jump to that beginning (either forwards or backwards). If the cursor is already at that position, it will jump to the true beginning of the line.
+#set smarthome
 
 
 ## === Key bindings ===
