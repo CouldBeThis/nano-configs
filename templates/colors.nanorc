@@ -1,0 +1,57 @@
+## - - - - - Top edge of window - - - - - ##
+##
+## titlebar 
+set titlecolor 
+
+## - - - - - Vertical elements - - - - - ##
+##
+## Line numbers
+set numbercolor 
+##
+## For the indicator alias "scrollbar"
+set scrollercolor 
+##
+## For the vertical guiding stripe. 
+# set stripecolor 
+
+## - - - - - Text editing area - - - - - ##
+##
+## Selected text
+set selectedcolor
+##
+## Highlighting a search match
+set spotlightcolor 
+##
+## For the prompt bar (default = titlecolor)
+# set promptcolor 
+##
+## - - - - - Bottom edge of window - - - - - ##
+
+## Status bar when an error message is displayed
+set errorcolor 
+##
+## For the minibar (default = titlecolor)
+# set minicolor 
+##
+## For the status bar
+set statuscolor 
+##
+## Help lines at bottom of screen
+## Shortcut descriptions
+set functioncolor 
+## Shortcut key combos
+set keycolor 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
