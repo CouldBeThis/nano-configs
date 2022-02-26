@@ -1,0 +1,3 @@
+[submodule "nanorc-syntax"]
+	path = nanorc-syntax
+	url = git@github.com:CouldBeThis/nanorc-syntax.git
