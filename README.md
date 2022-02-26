@@ -20,7 +20,9 @@ See also the [`NANORC(5)` docs](https://nano-editor.org/dist/latest/nanorc.5.htm
 
 ### prefered: clone the repo
 
-To clone this repo *and* the submodule containing the syntax files, you must use recursive clone. Choose whichever is more appropriate. Both of these is set to send the files to `~.config/nano/` but you may change the command or move them to another directory that works for you. `git` will *not* over-write any existing file, it will produce an error. If you have `nano` configurations in another location, it may read those first (see troubleshooting, below)
+To clone this repo *and* the submodule containing the syntax files, you must use recursive clone. Choose whichever is more appropriate. Both of these is set to send the files to `~.config/nano/` but you may change the command or move them to another directory that works for you. 
+
+`git` will *not* over-write any existing file, it will produce an error. If you have `nano` configurations in another location, it may read those first (see troubleshooting, below)
 
 **option 1:** using unauthenticated `https` (no github account set up in the terminal):
 
@@ -51,6 +53,12 @@ not a smooth way to go.
 #### updating
 
 ??? you will have to repeat the steps above. if you made any changes yourself you will have to manually compare the files. It is unideal.
+
+### using a location other than `~/.config/nano`
+
+If you choose a different location that the default, you must update the file `nanorc` in the base directory with the path to the syntax highlighting files at the [appropriate spot](https://github.com/CouldBeThis/nano-configs/blob/4dd09995542fb48fdb4d71c9b6340f1f19fd82ac/nanorc#L275).
+
+See [Issue #2](https://github.com/CouldBeThis/nano-configs/issues/2) for details. 
 
 ## syntax highlighting
 
