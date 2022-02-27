@@ -1,0 +1,70 @@
+######### NANORC(5) TEXT STYLE SUPPORT #########
+## . . . . . . . . By Release . . . . . . . . ##
+## - - - - - - - - - - - - - - - - - - - - - -##
+
+## . . . . . . . . . BASIC . . . . . . . . . .##
+# Will change with terminal color scheme:
+black,black
+blue,blue
+cyan,cyan
+green,green
+magenta,magenta
+red,red
+yellow,yellow
+white,white
+
+
+## . . . . . . . . v.2.9.6 . . . . . . . . . .##
+# Will change with terminal color scheme:
+normal,normal
+
+## . . . . . . . . . v.5.0 . . . . . . . . . .##
+## Not affected by terminal color scheme:
+lagoon,lagoon
+latte,latte
+lime,lime
+mauve,mauve
+mint,mint
+orange,orange
+peach,peach
+pink,pink
+purple,purple
+
+# Will change with terminal color scheme:
+lightblack,lightblack
+lightblue,lightblue
+lightcyan,lightcyan
+lightgreen,lightgreen
+lightmagenta,lightmagenta
+lightred,lightred
+lightwhite,lightwhite
+lightyellow,lightyellow
+
+## . . . . . . . . . v.5.0 . . . . . . . . . .##
+# (all colors)
+# bold
+# italic
+
+## . . . . . . . . . v.5.8 . . . . . . . . . .##
+# Will change with terminal color scheme:
+gray,gray
+grey,grey
+
+## . . . . . . . . . v.6.0 . . . . . . . . . .##
+## Not affected by terminal color scheme:
+beet,beet
+brick,brick
+brown,brown
+crimson,crimson
+ocher,ocher
+plum,plum
+rosy,rosy
+sage,sage
+sand,sand
+sea,sea
+sky,sky
+slate,slate
+tawny,tawny
+teal,teal
+
+
