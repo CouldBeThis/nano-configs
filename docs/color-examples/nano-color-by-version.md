@@ -14,11 +14,11 @@ If someone wants to write something smarter and more accurate here, you are more
 
 ## Screenshots of all colors available
 
-you can obtain the sample document from the repository: [`color-example.nanorc`](color-example.nanorc). At some point in the suture the syntax highlighting may no longer work in the document because technically it shouldn't highlighting the second column after a tab. If/when that happen you can obtain the version of `nanorc.nanorc` used to create the demos [here](https://github.com/CouldBeThis/nanorc-syntax/blob/f9dbdb47d2bb70ef1210474c0e802ff94f99c6b6/nanorc.nanorc).
+you can obtain the sample document from the repository: [`color-example.nanorc`](color-example.nanorc). At some point in the suture the syntax highlighting may no longer work in the document because technically it shouldn't highlighting the second column after a tab. If/when that happen you can obtain the version of `nanorc.nanorc` used to create the demos [here](https://github.com/CouldBeThis/nanorc-syntax/blob/f9dbdb47d2bb70ef1210474c0e802ff94f99c6b6/nanorc.nanorc).
 
 | Builtin Tango Dark iTerm2 theme                              | Violet Night iTerm2 theme                                    | Atelier Sulpherpool iTerm2 theme                             |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| ![Builtin Tango Dark iTerm2 theme](2022-02-26-BuiltinTangoDark-thumbnail.png) | ![Violet Night iTerm2 theme](2022-02-26-VioletNight-thumbnail.png) | ![Atelier Sulpherpool iTerm2 theme](2022-02-26-AtelierSulpherpool-thumbnail.png) |
+| [![Builtin Tango Dark iTerm2 theme](2022-02-26-BuiltinTangoDark-thumbnail.png)](2022-02-26-BuiltinTangoDark.png) | [![Violet Night iTerm2 theme](2022-02-26-VioletNight-thumbnail.png)](2022-02-26-VioletNight.png) | [![Atelier Sulpherpool iTerm2 theme](2022-02-26-AtelierSulpherpool-thumbnail.png)](2022-02-26-AtelierSulpherpool.png) |
 
 
 
