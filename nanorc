@@ -1,88 +1,103 @@
-## display line numbers on the left-hand side
-set linenumbers
 
-##set mouse does the opposite of what it sounds like.. unsets the mouse. I preffer to 
-##leave it toggled off in the nanorc file. 
+
+
+############### MISC BEHAVIOR ##################
+## . . . . . . . . . . . . . . . . . . . . . .##
+##
+
+##set mouse seems to toggle certain mouse abilities on while others off; doesn't jive with documentation
 #set mouse
+
+## Save the cursor position of files between editing sessions. The cursor position is 
+## remembered for the 200 most-recently edited files.
+set positionlog
+
+## When reading in a file with ^R, insert it into a new buffer by default.
+#set multibuffer
+
+## When neither the file’s name nor its first line give a clue, try using libmagic to determine the applicable syntax. (Calling libmagic can be relatively time consuming. It is therefore not done by default.)
+#set magic
+
+## Scroll the buffer contents per half-screen instead of per line.
+#set jumpyscrolling
+
+################## TEXT FLOW ###################
+## . . . . . . . entire screen . . . . . . . .##
+##
+
+## Set the target width for justifying and automatic hard-wrapping at this number of columns. If the value is 0 or less, wrapping will occur at the width of the screen minus number columns, allowing the wrap point to vary along with the width of the screen if the screen is resized. The default value is −8.
+#set fill number
+
+## enable wrapping (softwrap) at spaces and tabs rather than cutting in the middle of a word (atblanks)
+set softwrap
+set atblanks
+
+## Don’t hard-wrap text at all. used to be called "set nowrap"
+## (documentation is unclear about the meaning of this option)
+#unset breaklonglines
+
+################# SELECTIONS ###################
+## . . text flow on a word-by-word basis . . .##
+##
+
+##Set the regular expression for matching the quoting part of a line. The default value is "^([ \t]*([!#%:;>|}]|//))+". (Note that \t stands for an actual Tab character.) This makes it possible to rejustify blocks of quoted text when composing email, and to rewrap blocks of line comments when writing source code.
+# set quotestr "regex"
+
+## Detect word boundaries differently by treating punctuation characters as parts of words.
+# set wordbounds
+
+## Specify which other characters (besides the normal alphanumeric ones) should be considered as parts of words. When using this option, you probably want to unset wordbounds.
+#set wordchars "characters"
+
+## Set the characters treated as closing punctuation when justifying paragraphs. This may not include blank characters. Only the specfified closing punctuation, optionally followed by closing brackets (see brackets), can end sentences. The default value is "!.?".
+#set punct "characters"
+
+################ FIND & REPLACE ################
+## . . . . . . . . . . . . . . . . . . . . . .##
+##
+
+## Do case-sensitive searches by default
+#set casesensitive
+
+## Remember the used search/replace strings for the next session.
+#set historylog
+
+## Do regular-expression searches by default. Regular expressions in nano are of the extended type (ERE).
+#set regexp
+
+############## KEYBOARD INTERFACE ##############
+## . . . . . . . . . . . . . . . . . . . . . .##
+##
+
+## Use cut-from-cursor-to-end-of-line by default, instead of cutting the whole line.
+#set cutfromcursor
 
 # Automatically indent a newly created line to the same number of tabs and/or spaces as 
 # the previous line (or as the next line if the previous line is the beginning of a 
 # paragraph).
 set autoindent
 
-## enable wrapping (softwrap) at spaces and tabs rather than cutting in the middle of a 
-## word (atblanks)
-set softwrap
-set atblanks
-
+## Convert each typed tab to spaces -- to the number of spaces that a tab at that position would take up.
+#set tabstospaces
 set tabsize 4
 
-## Remember the used search/replace strings for the next session.
-#set historylog
-
-## Display a "scrollbar" on the righthand side of the edit window.
-set indicator
-
-## Draw a vertical stripe at the given column, to help judge the width of the text.  (The color of the stripe can be changed with set stripecolor.)
-set guidestripe 72
-
-## Save the cursor position of files between editing sessions. The cursor position is 
-## remembered for the 200 most-recently edited files.
-set positionlog
+## Make Ctrl+Right and Ctrl+Delete stop at word ends instead of beginnings.
+#set afterends
 
 ## Make the Home key smarter. When Home is pressed anywhere but at the very beginning of non-whitespace characters on a line, the cursor will jump to that beginning (either forwards or backwards). If the cursor is already at that position, it will jump to the true beginning of the line.
 #set smarthome
 
-## Suppress the title bar and instead show information about the current buffer at the bottom of the screen, in the space for the status bar. 
-#set minibar
+## Let an unmodified Backspace or Delete erase the marked region (instead of a single character, and without affecting the cutbuffer).
+## does not work on NETBOOK
+set zap
 
-## Use the top-right corner of the screen for showing some state flags: I when auto-indenting, M when the mark is on, L when hard-wrapping (breaking long lines), R when recording a macro, and S when soft-wrapping. When the buffer is modified, a star (*) is shown after the filename in the center of the title bar. 
-#set stateflags
-
-set speller hunspell
-
-######## COLORS #########
-## white, black, blue, green, red, cyan, yellow, magenta, and normal (default)
-## other valid (but unprefixable) color names are: pink, purple, mauve,##lagoon, mint, lime, peach, orange, latte, rosy, beet, plum, sea, sky, slate, teal, sage, brown, ocher, sand, tawny, brick, crimson, and normal
-## color may also be specified as a three-digit hexadecimal number prefixed with #, with the digits representing the amounts of red, green, and blue, respectively.
-
-## NO SPACE after comma!
-
-#set titlecolor white,blue
-#set numbercolor blue
-#set titlecolor magenta,rosy
-#set numbercolor sky,sea
-set numbercolor sea		
-#set titlecolor sea,black
-set titlecolor white,cyan
-set minicolor bold,black,mauve
-#set titlecolor tawny,beet
-
-## Use bold instead of reverse video for the title bar, status bar, key combos, function tags, line numbers, and selected text
-#set boldtext
-
-## status bar when an error message is displayed
-#set errorcolor white,brick
-
-## shortcut key combos in the two help lines at the bottom of the screen
-#set keycolor white,cyan
-#set keycolor brick,peach
-set keycolor sky
-
-## function descriptions in the two help lines at the bottom of the screen.
-#set functioncolor cyan,black
-#set functioncolor peach,black
-set functioncolor sea
-
-## selected text
-set selectedcolor bold,mauve,black
-
-set scrollercolor lagoon,slate
-
-######### from v5 sample.nanorc #########
+## Interpret the Delete and Backspace keys differently so that both Backspace and Delete work properly. You should only use this option when on your system either Backspace acts like Delete or Delete acts like Backspace.
+# set rebinddelete
 
 
-## === Key bindings ===
+################# KEYBINDINGS ##################
+## . . . . . . . . . . . . . . . . . . . . . .##
+##
 
 ## NETBOOK:
 ## 	^		=	ctrl
@@ -121,7 +136,6 @@ bind ^V paste all
 ## nano will not start if ^C is bound to something other than the default unless cancel in yesno menu has a new binding assigned to it
 bind ^C cancel yesno
 
-
 #bind ^P location main
 bind ^A mark main
 #unbind ^K main
@@ -144,121 +158,135 @@ bind M-G gotoline all
 ## Throw away the current line (or the marked region). (This function is bound by default to <Meta+Delete>.)
 bind M-D zap main
 
-## Let an unmodified Backspace or Delete erase the marked region (instead of a single character, and without affecting the cutbuffer).
-## does not work on NETBOOK
-set zap
 
 ## original
 ##bind M-U undo main
 ##bind M-R redo main
 unbind ^Z all
 bind ^Z undo main
-## disabled because it produces the error of being "invalid" (gallium)
+## disabled because it produces the error of being "invalid" (NETBOOK)
 #bind M^Z redo main
 #bind ^U undo main
 #bind ^E redo main
-#set multibuffer
+
 
 ## remove shortcut to invoke linter
 unbind M-B all
 ## remove shortcut to format/arrange/manipulate buffer
 unbind M-F all
 
+################### INTERFACE ##################
+## . . . . .  . . . . VISUAL . . . . . . . . .##
 
-## below installed and set up from https://github.com/scopatz/nanorc
-## to install:
-## curl https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh | sh
+## display line numbers on the left-hand side
+set linenumbers
 
-## commenting out filetypes I do not anticipate using
+## Display a "scrollbar" on the righthand side of the edit window.
+set indicator
 
-include "~/.nano/nanorc-syntax/apacheconf.nanorc"
-# include "~/.nano/nanorc-syntax/arduino.nanorc"
-include "~/.nano/nanorc-syntax/asciidoc.nanorc"
-#include "~/.nano/nanorc-syntax/asm.nanorc"
-include "~/.nano/nanorc-syntax/awk.nanorc"
-include "~/.nano/nanorc-syntax/c.nanorc"
-#include "~/.nano/nanorc-syntax/clojure.nanorc"
-include "~/.nano/nanorc-syntax/cmake.nanorc"
-include "~/.nano/nanorc-syntax/coffeescript.nanorc"
-include "~/.nano/nanorc-syntax/colortest.nanorc"
-include "~/.nano/nanorc-syntax/conf.nanorc"
-#include "~/.nano/nanorc-syntax/csharp.nanorc"
-include "~/.nano/nanorc-syntax/css.nanorc"
-#include "~/.nano/nanorc-syntax/cython.nanorc"
-include "~/.nano/nanorc-syntax/dot.nanorc"
-include "~/.nano/nanorc-syntax/dotenv.nanorc"
-include "~/.nano/nanorc-syntax/email.nanorc"
-include "~/.nano/nanorc-syntax/Dockerfile.nanorc"
-include "~/.nano/nanorc-syntax/etc-hosts.nanorc"
-include "~/.nano/nanorc-syntax/fish.nanorc"
-#include "~/.nano/nanorc-syntax/fortran.nanorc"
-#include "~/.nano/nanorc-syntax/gentoo.nanorc"
-include "~/.nano/nanorc-syntax/git.nanorc"
-include "~/.nano/nanorc-syntax/gitcommit.nanorc"
-#include "~/.nano/nanorc-syntax/glsl.nanorc"
-include "~/.nano/nanorc-syntax/go.nanorc"
-include "~/.nano/nanorc-syntax/gradle.nanorc"
-include "~/.nano/nanorc-syntax/groff.nanorc"
-#include "~/.nano/nanorc-syntax/haml.nanorc"
-include "~/.nano/nanorc-syntax/haskell.nanorc"
-include "~/.nano/nanorc-syntax/html.nanorc"
-include "~/.nano/nanorc-syntax/html.j2.nanorc"
-include "~/.nano/nanorc-syntax/ical.nanorc"
-include "~/.nano/nanorc-syntax/ini.nanorc"
-include "~/.nano/nanorc-syntax/inputrc.nanorc"
-#include "~/.nano/nanorc-syntax/jade.nanorc"
-include "~/.nano/nanorc-syntax/java.nanorc"
-include "~/.nano/nanorc-syntax/javascript.nanorc"
-include "~/.nano/nanorc-syntax/js.nanorc"
-include "~/.nano/nanorc-syntax/json.nanorc"
-include "~/.nano/nanorc-syntax/keymap.nanorc"
-#include "~/.nano/nanorc-syntax/kickstart.nanorc"
-include "~/.nano/nanorc-syntax/kotlin.nanorc"
-#include "~/.nano/nanorc-syntax/ledger.nanorc"
-include "~/.nano/nanorc-syntax/lisp.nanorc"
-include "~/.nano/nanorc-syntax/lua.nanorc"
-include "~/.nano/nanorc-syntax/makefile.nanorc"
-include "~/.nano/nanorc-syntax/man.nanorc"
-include "~/.nano/nanorc-syntax/markdown.nanorc"
-#include "~/.nano/nanorc-syntax/mpdconf.nanorc"
-include "~/.nano/nanorc-syntax/mutt.nanorc"
-include "~/.nano/nanorc-syntax/nanorc.nanorc"
-include "~/.nano/nanorc-syntax/nginx.nanorc"
-include "~/.nano/nanorc-syntax/nmap.nanorc"
-include "~/.nano/nanorc-syntax/ocaml.nanorc"
-include "~/.nano/nanorc-syntax/patch.nanorc"
-#include "~/.nano/nanorc-syntax/peg.nanorc"
-include "~/.nano/nanorc-syntax/perl.nanorc"
-include "~/.nano/nanorc-syntax/perl6.nanorc"
-include "~/.nano/nanorc-syntax/php.nanorc"
-include "~/.nano/nanorc-syntax/pkg-config.nanorc"
-include "~/.nano/nanorc-syntax/pkgbuild.nanorc"
-#include "~/.nano/nanorc-syntax/po.nanorc"
-#include "~/.nano/nanorc-syntax/pov.nanorc"
-#include "~/.nano/nanorc-syntax/privoxy.nanorc"
-include "~/.nano/nanorc-syntax/puppet.nanorc"
-#include "~/.nano/nanorc-syntax/pug.nanorc"
-include "~/.nano/nanorc-syntax/python.nanorc"
-include "~/.nano/nanorc-syntax/reST.nanorc"
-include "~/.nano/nanorc-syntax/rpmspec.nanorc"
-include "~/.nano/nanorc-syntax/ruby.nanorc"
-include "~/.nano/nanorc-syntax/rust.nanorc"
-include "~/.nano/nanorc-syntax/scala.nanorc"
-include "~/.nano/nanorc-syntax/sed.nanorc"
-include "~/.nano/nanorc-syntax/sh.nanorc"
-#include "~/.nano/nanorc-syntax/sls.nanorc"
-include "~/.nano/nanorc-syntax/sql.nanorc"
-#include "~/.nano/nanorc-syntax/svn.nanorc"
-include "~/.nano/nanorc-syntax/swift.nanorc"
-include "~/.nano/nanorc-syntax/systemd.nanorc"
-include "~/.nano/nanorc-syntax/tcl.nanorc"
-include "~/.nano/nanorc-syntax/tex.nanorc"
-include "~/.nano/nanorc-syntax/vala.nanorc"
-#include "~/.nano/nanorc-syntax/verilog.nanorc"
-include "~/.nano/nanorc-syntax/vi.nanorc"
-include "~/.nano/nanorc-syntax/xml.nanorc"
-include "~/.nano/nanorc-syntax/xresources.nanorc"
-include "~/.nano/nanorc-syntax/yaml.nanorc"
-#include "~/.nano/nanorc-syntax/yum.nanorc"
-include "~/.nano/nanorc-syntax/zsh.nanorc"
-include "~/.nano/nanorc-syntax/gitignore.nanorc"
+## Draw a vertical stripe at the given column, to help judge the width of the text.  (The color of the stripe can be changed with set stripecolor.)
+# set guidestripe 72
+
+## Suppress the title bar and instead show information about the current buffer at the bottom of the screen, in the space for the status bar. 
+#set minibar
+
+## Use the top-right corner of the screen for showing some state flags: I when auto-indenting, M when the mark is on, L when hard-wrapping (breaking long lines), R when recording a macro, and S when soft-wrapping. When the buffer is modified, a star (*) is shown after the filename in the center of the title bar. 
+#set stateflags
+
+## Set the two characters used to indicate the presence of tabs and spaces. They must be single-column characters. The default pair for a UTF-8 locale is "»⋅", and for other locales ">.".
+#set whitespace "characters"
+
+## Constantly display the cursor position in the status bar. This overrides the option quickblank.
+#set constantshow
+
+## Don’t display the two help lines at the bottom of the screen.
+#set nohelp
+
+## Make status-bar messages disappear after 1 keystroke instead of after 20. Note that option constantshow overrides this. When option minibar or zero is in effect, quickblank makes a message disappear after 0.8 seconds instead of after the default 1.5 seconds.
+# set quickblank
+
+## Hide all elements of the interface (title bar, status bar, and help lines) and use all rows of the terminal for showing the contents of the buffer. The status bar appears only when there is a significant message, and disappears after 1.5 seconds or upon the next keystroke. With M−Z the title bar plus status bar can be toggled. With M−X the help lines.
+# set zero
+
+
+################### COLORS #####################
+## . . . . . . . . . . . . . . . . . . . . . .##
+##
+## see notes at https://github.com/CouldBeThis/nano-configs/blob/main/templates/colors.nanorc
+##
+## FORMAT
+## set ELEMENT [bold,][italic,]fgcolor,bgcolor
+##    * if only one color is given, will be fgcolor
+## * NO SPACE after comma!
+
+## - - - - - - All edges of window  - - - - - ##
+##
+## Use bold instead of reverse video for the title bar, status bar, key combos, function tags, line numbers, and selected text (toggled on if uncommented, does not take any colors)
+set boldtext
+
+## - - - - - - Top edge of window  - - - - - ##
+##
+## titlebar 
+set titlecolor #000,slate
+
+## - - - - - - Vertical elements - - - - - - ##
+##
+## Line numbers
+set numbercolor slate,black
+##
+## For the indicator alias "scrollbar"
+set scrollercolor slate,sea
+##
+## For the vertical guiding stripe. 
+# set stripecolor 
+
+## - - - - - - Text editing area - - - - - - ##
+##
+## Selected text
+set selectedcolor bold,mauve,black
+##
+## Highlighting a search match
+set spotlightcolor italic,white,brick
+##
+## For the prompt bar (default = titlecolor)
+# set promptcolor 
+##
+## - - - - - Bottom edge of window - - - - - ##
+
+
+## test
+set errorcolor bold,mauve,white
+set minicolor bold,italic,mauve,white
+set statuscolor mauve,white
+
+set functioncolor red,mauve
+##end test
+
+
+## Status bar when an error message is displayed
+set errorcolor bold,mauve,white
+##
+## For the minibar (default = titlecolor)
+# set minicolor bold,black,mauve
+##
+## For the status bar
+set statuscolor white,lagoon
+##
+## Help lines at bottom of screen
+## Shortcut descriptions
+set functioncolor sea
+## Shortcut key combos
+set keycolor sky
+
+
+############# SYNTAX HIGHLIGHTING ##############
+## . . . . . . . . . . . . . . . . . . . . . .##
+
+include "~/.config/nano/nanorc-syntax/*.nanorc"
+
+## ,,,,,;;;;;]]]]]/////|\\\\\[[[[[[;;;;;,,,,, ##
+################################################
+## . . . . . . . . . . . . . . . . . . . . . .##
+## - - - - - - - - - - - - - - - - - - - - - -##
+##
+## ,,,,,;;;;;]]]]]/// eof \\\[[[[[[;;;;;,,,,, ##
