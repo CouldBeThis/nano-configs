@@ -12,6 +12,10 @@ At the bottom of the page are some links if you are interested in terminal color
 
 If someone wants to write something smarter and more accurate here, you are more than welcome. 
 
+<!--ts-->
+<!--te-->
+
+
 ## Screenshots of all colors available
 
 Here is the same file viewed in 3 different themes, a fairly standard (but nice) dark and light one followed by a third that moves most of the colors around. 
