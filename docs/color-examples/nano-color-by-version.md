@@ -13,6 +13,23 @@ At the bottom of the page are some links if you are interested in terminal color
 If someone wants to write something smarter and more accurate here, you are more than welcome. 
 
 <!--ts-->
+* [in what version of nano various text styles &amp; colors are possible](#in-what-version-of-nano-various-text-styles--colors-are-possible)
+   * [about terminal colors](#about-terminal-colors)
+   * [Screenshots of all colors available](#screenshots-of-all-colors-available)
+      * [see colors in your terminal environment](#see-colors-in-your-terminal-environment)
+   * [Details of what colors and styles are available in each release](#details-of-what-colors-and-styles-are-available-in-each-release)
+      * [version 1.<em>x</em>](#version-1x)
+      * [version 2.0](#version-20)
+      * [version 2.90](#version-290)
+      * [version 2.9.5](#version-295)
+      * [v.2.9.6](#v296)
+      * [v.5.0](#v50)
+      * [v.5.8](#v58)
+      * [v.6.0](#v60)
+   * [resources](#resources)
+
+<!-- Added at: Sun 27 Feb 2022 04:22:46 EST -->
+
 <!--te-->
 
 
