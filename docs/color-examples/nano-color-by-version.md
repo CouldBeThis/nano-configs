@@ -14,15 +14,19 @@ If someone wants to write something smarter and more accurate here, you are more
 
 ## Screenshots of all colors available
 
-you can obtain the sample document from the repository: [`color-example.nanorc`](color-example.nanorc). At some point in the suture the syntax highlighting may no longer work in the document because technically it shouldn't highlighting the second column after a tab. If/when that happen you can obtain the version of `nanorc.nanorc` used to create the demos [here](https://github.com/CouldBeThis/nanorc-syntax/blob/f9dbdb47d2bb70ef1210474c0e802ff94f99c6b6/nanorc.nanorc).
+Here is the same file viewed in 3 different themes, a fairly standard (but nice) dark and light one followed by a third that moves most of the colors around. 
 
 | Builtin Tango Dark iTerm2 theme                              | Violet Night iTerm2 theme                                    | Atelier Sulpherpool iTerm2 theme                             |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [![Builtin Tango Dark iTerm2 theme](2022-02-26-BuiltinTangoDark-thumbnail.png)](2022-02-26-BuiltinTangoDark.png) | [![Violet Night iTerm2 theme](2022-02-26-VioletNight-thumbnail.png)](2022-02-26-VioletNight.png) | [![Atelier Sulpherpool iTerm2 theme](2022-02-26-AtelierSulpherpool-thumbnail.png)](2022-02-26-AtelierSulpherpool.png) |
 
+### see colors in your terminal environment
 
+you can obtain the sample document from the repository: [`color-example.nanorc`](color-example.nanorc). At some point in the future the syntax highlighting may no longer work in the document as it is because technically it shouldn't highlighting the second column after a tab. If/when that happens you can obtain the version of `nanorc.nanorc` used to create the demos [here](https://github.com/CouldBeThis/nanorc-syntax/blob/f9dbdb47d2bb70ef1210474c0e802ff94f99c6b6/nanorc.nanorc).
 
 ## Details of what colors and styles are available in each release
+
+I went through the documentation and collected information about colors and styling.
 
 ### version 1.*x*
 
