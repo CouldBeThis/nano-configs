@@ -4,6 +4,37 @@ A friendly configuration for `nano` text editor to make it intuitive for those w
 
 Takes advantage of modern terminals with many colors. 
 
+<!--ts-->
+* [my nano configs](#my-nano-configs)
+   * [disclaimer](#disclaimer)
+   * [quickstart](#quickstart)
+      * [where the files go](#where-the-files-go)
+      * [prefered: clone the repo](#prefered-clone-the-repo)
+         * [updating](#updating)
+      * [alternative: download the zips (via web)](#alternative-download-the-zips-via-web)
+         * [updating](#updating-1)
+      * [using a location other than ~/.config/nano](#using-a-location-other-than-confignano)
+   * [syntax highlighting](#syntax-highlighting)
+   * [requirements](#requirements)
+      * [nano](#nano)
+         * [linux](#linux)
+         * [mac](#mac)
+         * [windows](#windows)
+   * [troubleshooting](#troubleshooting)
+      * [nano ignores configurations](#nano-ignores-configurations)
+      * [errors](#errors)
+      * [hints: Mac OS](#hints-mac-os)
+   * [about editing and making your own files](#about-editing-and-making-your-own-files)
+   * [todo](#todo)
+      * [In the nanorc and .nanorc files](#in-the-nanorc-and-nanorc-files)
+      * [In this repo](#in-this-repo)
+      * [Wishlist (not sure if possible)](#wishlist-not-sure-if-possible)
+   * [helpful resources](#helpful-resources)
+
+<!-- Added by: CouldBeThis, at: Sun 27 Feb 2022 04:17:53 EST -->
+
+<!--te-->
+
 ## disclaimer
 
 Work in progress and for my own purposes. Proceed with caution. Feel free to open an issue if the mood strikes you for some reason. 
