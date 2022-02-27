@@ -222,20 +222,20 @@ set indicator
 ## - - - - - - All edges of window  - - - - - ##
 ##
 ## Use bold instead of reverse video for the title bar, status bar, key combos, function tags, line numbers, and selected text (toggled on if uncommented, does not take any colors)
-# set boldtext
+set boldtext
 
 ## - - - - - - Top edge of window  - - - - - ##
 ##
 ## titlebar 
-set titlecolor white,cyan
+set titlecolor #000,slate
 
 ## - - - - - - Vertical elements - - - - - - ##
 ##
 ## Line numbers
-set numbercolor sea
+set numbercolor slate,black
 ##
 ## For the indicator alias "scrollbar"
-set scrollercolor lagoon,slate
+set scrollercolor slate,sea
 ##
 ## For the vertical guiding stripe. 
 # set stripecolor 
@@ -252,6 +252,16 @@ set spotlightcolor italic,white,brick
 # set promptcolor 
 ##
 ## - - - - - Bottom edge of window - - - - - ##
+
+
+## test
+set errorcolor bold,mauve,white
+set minicolor bold,italic,mauve,white
+set statuscolor mauve,white
+
+set functioncolor red,mauve
+##end test
+
 
 ## Status bar when an error message is displayed
 set errorcolor bold,mauve,white
@@ -277,5 +287,6 @@ include "~/.config/nano/nanorc-syntax/*.nanorc"
 ## ,,,,,;;;;;]]]]]/////|\\\\\[[[[[[;;;;;,,,,, ##
 ################################################
 ## . . . . . . . . . . . . . . . . . . . . . .##
+## - - - - - - - - - - - - - - - - - - - - - -##
 ##
 ## ,,,,,;;;;;]]]]]/// eof \\\[[[[[[;;;;;,,,,, ##
