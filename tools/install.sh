@@ -8,7 +8,7 @@ mv $InstallDir/nano $InstallDir/nano-old
 
 git clone --recursive git@github.com:CouldBeThis/nano-configs.git $InstallDir
 
-
+nano -V
 
 
 
