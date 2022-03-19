@@ -3,7 +3,7 @@
 filepos_history
 search_history
 *_history
-# nanorc-syntax/*
-# nanorc-syntax
+nanorc-syntax/*
+nanorc-syntax
 *.save
 _test.*
