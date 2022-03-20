@@ -4,9 +4,92 @@ A friendly configuration for `nano` text editor to make it intuitive for those w
 
 Takes advantage of modern terminals with many colors. 
 
+<!--ts-->
+* [my nano configs](#my-nano-configs)
+   * [disclaimer](#disclaimer)
+   * [quickstart](#quickstart)
+      * [where the files go](#where-the-files-go)
+      * [prefered: clone the repo](#prefered-clone-the-repo)
+         * [updating](#updating)
+      * [alternative: download the zips (via web)](#alternative-download-the-zips-via-web)
+         * [updating](#updating-1)
+      * [using a location other than ~/.config/nano](#using-a-location-other-than-confignano)
+   * [syntax highlighting](#syntax-highlighting)
+   * [requirements](#requirements)
+      * [nano](#nano)
+         * [linux](#linux)
+         * [mac](#mac)
+         * [windows](#windows)
+   * [troubleshooting](#troubleshooting)
+      * [nano ignores configurations](#nano-ignores-configurations)
+      * [errors](#errors)
+      * [hints: Mac OS](#hints-mac-os)
+   * [about editing and making your own files](#about-editing-and-making-your-own-files)
+   * [todo](#todo)
+      * [In the nanorc and .nanorc files](#in-the-nanorc-and-nanorc-files)
+      * [In this repo](#in-this-repo)
+      * [Wishlist (not sure if possible)](#wishlist-not-sure-if-possible)
+   * [helpful resources](#helpful-resources)
+
+<!-- Added by: CouldBeThis, at: Sun 27 Feb 2022 04:17:53 EST -->
+
+<!--te-->
+
 ## disclaimer
 
 Work in progress and for my own purposes. Proceed with caution. Feel free to open an issue if the mood strikes you for some reason. 
+
+## quickstart
+
+see also "Requirements" below.
+
+### where the files go
+
+This repo and the submodule for syntax files will typically go in your `$HOME`. Depending on preferences and system this will likely be either `~/.nano` or `~/.config/nano`.
+
+See also the [`NANORC(5)` docs](https://nano-editor.org/dist/latest/nanorc.5.html#DESCRIPTION).
+
+### prefered: clone the repo
+
+To clone this repo *and* the submodule containing the syntax files, you must use recursive clone. Choose whichever is more appropriate. Both of these is set to send the files to `~.config/nano/` but you may change the command or move them to another directory that works for you. 
+
+`git` will *not* over-write any existing file, it will produce an error. If you have `nano` configurations in another location, it may read those first (see troubleshooting, below)
+
+**option 1:** using unauthenticated `https` (no github account set up in the terminal):
+
+```sh
+git clone --recurse-submodules https://github.com/CouldBeThis/nano-configs.git ~/.config/nano
+```
+
+**option 2:** using authenticated `ssh` (github account authenticated in terminal):
+
+```sh
+git clone --recurse-submodules git@github.com:CouldBeThis/nano-configs.git ~/.config/nano
+```
+
+#### updating
+
+enter the repo directory (for example `~/.config/nano`) and run `git pull`
+
+### alternative: download the zips (via web)
+
+not a smooth way to go. 
+
+1. In the top right area of this page there is a button called `Code`, click that to open a menu and select "Download Zip". Extract the `.zip` into your target directory.
+
+2. Go to the [nanorc-syntax](https://github.com/CouldBeThis/nanorc-syntax) repo and also download that `.zip`
+
+3. Extract the `.zip` from step #2 *into the empty directory of the same name* from Step 1.
+
+#### updating
+
+??? you will have to repeat the steps above. if you made any changes yourself you will have to manually compare the files. It is unideal.
+
+### using a location other than `~/.config/nano`
+
+If you choose a different location that the default, you must update the file `nanorc` in the base directory with the path to the syntax highlighting files at the [appropriate spot](https://github.com/CouldBeThis/nano-configs/blob/4dd09995542fb48fdb4d71c9b6340f1f19fd82ac/nanorc#L275).
+
+See [Issue #2](https://github.com/CouldBeThis/nano-configs/issues/2) for details. 
 
 ## syntax highlighting
 
@@ -44,13 +127,21 @@ It is available via [`brew` package manager](https://brew.sh): `brew install nan
 
 Be aware that while `nano` does come included with the other command line tools on Mac OS, it is a very, very old version, if I recall correctly from the early 90s. This has to do with Apple's distaste for GPL-type liscences. So if you want to use that, there is no reason to bother with anything included here as it mostly will not work! My advice is to obtain a newer version, preferably via package manager as it will allow you to easily update to a newer version when available. 
 
-General Mac OS terminal tip: *Many* (if not all) of the included cli tools are unusual variants that resemble the normal ones in *most* cases but will occasionally exhibit strange and frustrating behaviour. For example `grep` and even `ls`. The `brew` package manage can help to install standard versions in a safe non destructive way.
+General Mac OS terminal tip: *Many* (if not all) of the included cli tools are unusual variants that resemble the normal ones in *most* cases but will occasionally exhibit strange and frustrating behaviour. For example `grep`, `sort` and even `ls`. The `brew` package manage can help to install standard versions in a safe non destructive way. 
 
 #### windows 
 
 I am not sure about how this works on windows which I do not use. :(
 
 ## troubleshooting
+
+### `nano` ignores configurations
+
+from [`NANORC(5)` docs](https://nano-editor.org/dist/latest/nanorc.5.html#DESCRIPTION):
+
+> The nanorc files contain the default settings for nano, a small and friendly editor. During startup, if −−rcfile is not given, nano will read two files: first the system-wide settings, from /etc/nanorc (the exact path might be different on your system), and then the user-specific settings, either from ~/.nanorc or from $XDG_CONFIG_HOME/nano/nanorc or from ~/.config/nano/nanorc, whichever is encountered first. If −−rcfile is given, nano will read just the specified settings file.
+
+### errors
 
 You will be alerted to errors in 2 ways:
 
@@ -62,6 +153,28 @@ Error in /home/youruser/.nanorc on line 149: Command "xxxxx" not understood
 ```
  so you can open nano and go to that line and inspect it, fix it or just prepend with `#` to comment it out.
 
+### hints: Mac OS
+
+For best experience on the Mac, I reccomend using [iTerm2](https://iterm2.com/index.html) rather than the standard terminal application th comes with the system. [kitty](https://sw.kovidgoyal.net/kitty/) is another popular optionbut requires more advanced configuration to make it useful to begin with. 
+
+On my system I had to do some extra configuring in iTerm2 in order to get the keybindings to work properly. I am not sure if this has to do with changes I made previously, or if it could be the case with just default settings. 
+
+Documentation on how to modify keybindings in iTerm2 can be found [in its documentation](https://iterm2.com/documentation-preferences-profiles-keys.html). I followed the instructions to go to `Preferences` > `Profiles` > `Keys` > `General`:
+
+> Left/Right Option Key Acts As
+>
+> It is common to use a modifier to send so-called "meta keys". For most users, selecting "+Esc" here is the right choice. The "Meta" option sets the high bit of the input character, and is not compatible with modern systems.
+
+By default, the modifier keys on a Mac keyboard from the bottom left unti lthe spacebar are: `⌃` `⌥` `⌘` these being:
+
+ * `⌃` - `control` - this is the modifier that does most of the work by default in `nano`; key combinations should work as expected when identified such as `^X` to exit
+ * `⌥` - `option` - if you make the configuration as specified, this should be the modifier `M-`
+ * `⌘` - command - should not be assigned any `nano` powers, leaving it for control of the external environment like terminal editor.
+
+## about editing and making your own files
+
+See [`nano-configs/templates/colors.nanorc`](https://github.com/CouldBeThis/nano-configs/blob/main/templates/colors.nanorc) for notes about colors.
+
 ## todo
 
 ### In the `nanorc` and `.nanorc` files
@@ -69,7 +182,7 @@ Error in /home/youruser/.nanorc on line 149: Command "xxxxx" not understood
  * [ ] Spellchecking
  * [ ] Tidy up, remove old commented out configs
  	* [ ] Perhaps organize old configs into alternative "sets" of command keys, color shemes
- 	* [ ] Perhaps split up files and `include` them in pieces
+ 	* [X] ~~Perhaps split up files and `include` them in pieces~~ Not possible! Turns out it is only possible to  `include` *syntaxfile* whose contents are more limited than the `nanorc`. See the [`nanorc` documentation](https://www.mankier.com/5/nanorc#Syntax_Highlighting).
  * [ ] Make use of more keys I don't have on this particular device such as `del`, `pg up`/`pg dn` and `function` keys. 
  * [ ] Improve color scheme
  * [ ] Improve `ctrl` + arrow key navigation in how it deals with punctuation and special charecters... currently sort of confusing.
@@ -81,21 +194,23 @@ Error in /home/youruser/.nanorc on line 149: Command "xxxxx" not understood
  		* [ ] improve anchor link display (higher constrast), e.g. `[top](#top)`
  		* [ ] escape charecters
  		* [ ] `YAML` frontmatter
-
+ * [X] ~~on Mac: `M-`+ arrows activates linter.. why?~~
+ * [ ] Move syntax changes that are just for myself to using `extendsyntax` and keep the main files general-purpose
 
 
 ### In this repo
 
- * [ ] Organize files so it's clear what belongs to be and what belongs to the `scopatz/nanorc` repo
- 	* [ ] Perhaps include as a (forked) submodule
- * [ ] Install instructions
+ * [x] ~~Organize files so it's clear what belongs to be and what belongs to the `scopatz/nanorc` repo~~
+ 	* [x] ~~Perhaps include as a (forked) submodule~~
+ * [x] ~~Install instructions~~
  	* [ ] Install script ???
  * [ ] Summarize shortcuts (cheatsheet)
  	* [ ] Perhaps including rationalization fos some decisions
+ * [ ] Move this list to github issues?
 
 ### Wishlist (not sure if possible)
 
- * [ ] Smarter word wrapping that doesn't cut words apart
+ * [X] ~~Smarter word wrapping that doesn't cut words apart~~
  * [ ] Change contents of the help menu at the bottom
  * [ ] Keystroke to commit file to `git` repo
  * [ ] Optimize keyboard shortcuts for markdown
@@ -125,7 +240,7 @@ Official `nano` website
  * [`.nanorc`](https://nano-editor.org/dist/latest/nanorc.5.html) - reference for the `nanorc` files
  * [user manual](https://nano-editor.org/dist/latest/nano.html)
  * Note the above links will automatically display information for the "latest" release of `nano` as per the URL. If you require the information regarding a *specific* version, they are organized in [this directory](https://nano-editor.org/dist/). 
-
+ * [Enable Syntax Highlighting and Colors in nano](https://factorpad.com/tech/full-stack/nano-syntax-highlighting.html) - simple tutorial
 
 
 
