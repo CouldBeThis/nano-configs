@@ -116,7 +116,7 @@ set zap
 ## ctrl + backspace = delete entire word to the left
 bind ^H chopwordleft main
 
-bind ^Q exit all
+bind M-Q exit all
 bind ^S savefile main
 #bind ^W writeout main
 #bind ^O insert main
