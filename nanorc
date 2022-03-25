@@ -282,7 +282,7 @@ set keycolor sky
 ############# SYNTAX HIGHLIGHTING ##############
 ## . . . . . . . . . . . . . . . . . . . . . .##
 
-include "~/.config/nano/nanorc-syntax/*.nanorc"
+include ~/.config/nano/nanorc-syntax/*.nanorc
 
 ## ,,,,,;;;;;]]]]]/////|\\\\\[[[[[[;;;;;,,,,, ##
 ################################################
