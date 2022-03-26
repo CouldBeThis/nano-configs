@@ -42,6 +42,8 @@ Work in progress and for my own purposes. Proceed with caution. Feel free to ope
 
 ## quickstart
 
+❌ see #20: these instructions are probably faulty
+
 see also "Requirements" below.
 
 ### where the files go
@@ -182,14 +184,14 @@ See [`nano-configs/templates/colors.nanorc`](https://github.com/CouldBeThis/nano
 
 ### In the `nanorc` and `.nanorc` files
 
-* [ ] #19 Spellchecking
-* [ ] #14 Tidy up, remove old commented out configs
+* #19 Spellchecking
+* #14 Tidy up, remove old commented out configs
   * [ ] #14 Perhaps organize old configs into alternative "sets" of command keys, color shemes
   * [x] #14 ~~Perhaps split up files and `include` them in pieces~~ Not possible! Turns out it is only possible to  `include` *syntaxfile* whose contents are more limited than the `nanorc`. See the [`nanorc` documentation](https://www.mankier.com/5/nanorc#Syntax_Highlighting).
-* [ ] #19 Make use of more keys I don't have on this particular device such as `del`, `pg up`/`pg dn` and `function` keys. 
-* [ ] #18 Improve color scheme
-* [ ] #19 Improve `ctrl` + arrow key navigation in how it deals with punctuation and special charecters... currently sort of confusing.
-- [ ] Syntax definition improvements (send some to upstream if they have not already been decided against there)
+* #19 Make use of more keys I don't have on this particular device such as `del`, `pg up`/`pg dn` and `function` keys. 
+* #18 Improve color scheme
+* #19 Improve `ctrl` + arrow key navigation in how it deals with punctuation and special charecters... currently sort of confusing.
+- Syntax definition improvements (send some to upstream if they have not already been decided against there)
   * [ ] #17 & #19 Markdown
     * [ ] add `==`text`==` for highlighting
     * [ ] codeblocks are a bit odd; see if I misunderstand their use of if they need tweaking
@@ -197,14 +199,14 @@ See [`nano-configs/templates/colors.nanorc`](https://github.com/CouldBeThis/nano
     * [ ] improve anchor link display (higher constrast), e.g. `[top](#top)`
     * [ ] escape charecters
     * [ ] `YAML` frontmatter
-* [x] ~~on Mac: `M-`+ arrows activates linter.. why?~~
-* [ ] #16 Move syntax changes that are just for myself to using `extendsyntax` and keep the main files general-purpose
+* ~~on Mac: `M-`+ arrows activates linter.. why?~~
+* #16 Move syntax changes that are just for myself to using `extendsyntax` and keep the main files general-purpose
 
 ### In this repo
 
 * [x] #16 ~~Organize files so it's clear what belongs to be and what belongs to the `scopatz/nanorc` repo~~
   * [x] #16 ~~Perhaps include as a (forked) submodule~~
-* [x] ~~Install instructions~~
+* [ ] #20 Install instructions
   * [ ] Install script ???
 * [ ] Summarize shortcuts (cheatsheet)
   * [ ] Perhaps including rationalization fos some decisions
@@ -212,41 +214,41 @@ See [`nano-configs/templates/colors.nanorc`](https://github.com/CouldBeThis/nano
 
 ### Wishlist (not sure if possible)
 
-* [x] ~~Smarter word wrapping that doesn't cut words apart~~
-* [ ] #19 Change contents of the help menu at the bottom
-* [ ] #17 Keystroke to commit file to `git` repo
-* [ ] #17 & #19 Optimize keyboard shortcuts for markdown
-  * [ ] `ctrl` + `1` (and so on): add `#` to start of line (make heading level 1)
-  * [ ] #17 add new list item at same indentation as current.
-    * [ ] if possible to detect whether currently in a list and what level, this should be automatic behaviour on `enter`
-    * [ ] if not, assign to some other keystroke
-    * [ ] also include for task list (` * [ ]` or ` - [ ]`)
-    * [ ] recognize either ` * ` or ` - ` lists
-  * [ ] #17 make current selection, or if none selected, current word **bold**, *italic*, ~~strikethrough~~, ==highlighted==, `code`
-  * [ ] #17 insert link/image 
-    * [ ] with clipboard URL inserted and cursor in description/alt portion
-    * [ ] if text selected, consider that text as description/alt and paste URL from clipboard 
-    * [ ] is it possible to detect if clipboard contains URL?
-    * [ ] how to interact between various clipboards?
-  * [ ] #17 Extra help screen for shortcuts and/or markdown syntaxt cheatsheet
-  * [ ] #17 Generate a TOC
-* [ ] #19 Could be useful (from [`nanorc(5)`]([NANORC](https://nano-editor.org/dist/latest/nanorc.5.html)):
-  * `formatter` - **formatter** *program* [*argument* ...]
-    
-    > Invokes a full-buffer-processing program (if the active syntax defines one).
-  * `execute`
-    
-    > Prompts for a program to execute. The program’s output will be inserted into  the current buffer (or into a new buffer when **M−F** is toggled).
-  * macros:
-    
-    > `recordmacro`
-    > 
-    > Starts the recording of keystrokes -- the keystrokes are stored as a macro. When already recording, the recording is stopped.
-    > 
-    > `runmacro`
-    > 
-    > Replays the keystrokes of the last recorded macro.
-* [ ] Improved (less confusing) interaction bewteen terminal emulator and `nano`
+1. ~~Smarter word wrapping that doesn't cut words apart~~
+2. #19 Change contents of the help menu at the bottom
+3. #17 Keystroke to commit file to `git` repo
+4. #17 & #19 Optimize keyboard shortcuts for markdown
+   * [ ] `ctrl` + `1` (and so on): add `#` to start of line (make heading level 1)
+   * [ ] #17 add new list item at same indentation as current.
+     * [ ] if possible to detect whether currently in a list and what level, this should be automatic behaviour on `enter`
+     * [ ] if not, assign to some other keystroke
+     * [ ] also include for task list (` * [ ]` or ` - [ ]`)
+     * [ ] recognize either ` * ` or ` - ` lists
+   * [ ] #17 make current selection, or if none selected, current word **bold**, *italic*, ~~strikethrough~~, ==highlighted==, `code`
+   * [ ] #17 insert link/image 
+     * [ ] with clipboard URL inserted and cursor in description/alt portion
+     * [ ] if text selected, consider that text as description/alt and paste URL from clipboard 
+     * [ ] is it possible to detect if clipboard contains URL?
+     * [ ] how to interact between various clipboards?
+   * [ ] #17 Extra help screen for shortcuts and/or markdown syntaxt cheatsheet
+   * [ ] #17 Generate a TOC
+5. #19 Could be useful (from [`nanorc(5)`]([NANORC](https://nano-editor.org/dist/latest/nanorc.5.html)):
+   * `formatter` - **formatter** *program* [*argument* ...]
+     
+     > Invokes a full-buffer-processing program (if the active syntax defines one).
+   * `execute`
+     
+     > Prompts for a program to execute. The program’s output will be inserted into  the current buffer (or into a new buffer when **M−F** is toggled).
+   * macros:
+     
+     > `recordmacro`
+     > 
+     > Starts the recording of keystrokes -- the keystrokes are stored as a macro. When already recording, the recording is stopped.
+     > 
+     > `runmacro`
+     > 
+     > Replays the keystrokes of the last recorded macro.
+6. Improved (less confusing) interaction bewteen terminal emulator and `nano`
 
 ## helpful resources
 
