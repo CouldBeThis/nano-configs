@@ -198,7 +198,7 @@ See [`nano-configs/templates/colors.nanorc`](https://github.com/CouldBeThis/nano
     * [ ] escape charecters
     * [ ] `YAML` frontmatter
 * [x] ~~on Mac: `M-`+ arrows activates linter.. why?~~
-* [ ] Move syntax changes that are just for myself to using `extendsyntax` and keep the main files general-purpose
+* [ ] #16 Move syntax changes that are just for myself to using `extendsyntax` and keep the main files general-purpose
 
 ### In this repo
 
