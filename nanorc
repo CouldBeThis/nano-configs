@@ -116,7 +116,7 @@ set zap
 ## ctrl + backspace = delete entire word to the left
 bind ^H chopwordleft main
 
-bind M-Q exit all
+bind M-x exit all
 bind ^S savefile main
 #bind ^W writeout main
 #bind ^O insert main
@@ -129,8 +129,8 @@ bind ^G findnext all
 bind ^R replace main
 #bind M-X flipnewbuffer all
 
-unbind M-X all
-bind ^X cut all
+#unbind M-X all
+bind ^k cut all
 bind ^C copy all
 bind ^V paste all
 ## nano will not start if ^C is bound to something other than the default unless cancel in yesno menu has a new binding assigned to it
