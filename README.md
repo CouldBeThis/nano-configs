@@ -5,31 +5,32 @@ A friendly configuration for `nano` text editor to make it intuitive for those w
 Takes advantage of modern terminals with many colors. 
 
 <!--ts-->
+
 * [my nano configs](#my-nano-configs)
-   * [disclaimer](#disclaimer)
-   * [quickstart](#quickstart)
-      * [where the files go](#where-the-files-go)
-      * [prefered: clone the repo](#prefered-clone-the-repo)
-         * [updating](#updating)
-      * [alternative: download the zips (via web)](#alternative-download-the-zips-via-web)
-         * [updating](#updating-1)
-      * [using a location other than ~/.config/nano](#using-a-location-other-than-confignano)
-   * [syntax highlighting](#syntax-highlighting)
-   * [requirements](#requirements)
-      * [nano](#nano)
-         * [linux](#linux)
-         * [mac](#mac)
-         * [windows](#windows)
-   * [troubleshooting](#troubleshooting)
-      * [nano ignores configurations](#nano-ignores-configurations)
-      * [errors](#errors)
-      * [hints: Mac OS](#hints-mac-os)
-   * [about editing and making your own files](#about-editing-and-making-your-own-files)
-   * [todo](#todo)
-      * [In the nanorc and .nanorc files](#in-the-nanorc-and-nanorc-files)
-      * [In this repo](#in-this-repo)
-      * [Wishlist (not sure if possible)](#wishlist-not-sure-if-possible)
-   * [helpful resources](#helpful-resources)
+  * [disclaimer](#disclaimer)
+  * [quickstart](#quickstart)
+    * [where the files go](#where-the-files-go)
+    * [prefered: clone the repo](#prefered-clone-the-repo)
+      * [updating](#updating)
+    * [alternative: download the zips (via web)](#alternative-download-the-zips-via-web)
+      * [updating](#updating-1)
+    * [using a location other than ~/.config/nano](#using-a-location-other-than-confignano)
+  * [syntax highlighting](#syntax-highlighting)
+  * [requirements](#requirements)
+    * [nano](#nano)
+      * [linux](#linux)
+      * [mac](#mac)
+      * [windows](#windows)
+  * [troubleshooting](#troubleshooting)
+    * [nano ignores configurations](#nano-ignores-configurations)
+    * [errors](#errors)
+    * [hints: Mac OS](#hints-mac-os)
+  * [about editing and making your own files](#about-editing-and-making-your-own-files)
+  * [todo](#todo)
+    * [In the nanorc and .nanorc files](#in-the-nanorc-and-nanorc-files)
+    * [In this repo](#in-this-repo)
+    * [Wishlist (not sure if possible)](#wishlist-not-sure-if-possible)
+  * [helpful resources](#helpful-resources)
 
 <!-- Added by: CouldBeThis, at: Sun 27 Feb 2022 04:17:53 EST -->
 
@@ -112,6 +113,7 @@ $ nano --version
  (C) 2014-2022 the contributors to nano
  Compiled options: --enable-utf8
 ```
+
 I have v. `6.2`. If you have version `5.x` or even lower, some options will not work. In my experience, any incompatibilities will not prevent use of the program but you will be alerted. See [troubleshooting](#troubleshooting) below. You can comment out lines of code that generate errors. 
 Information is available about the differences between `nano` versions on the GNU `nano` website. For an overview, see [`IMPROVEMENTS`](https://nano-editor.org/dist/latest/IMPROVEMENTS). For more detail, see [`NEWS`](https://nano-editor.org/dist/latest/NEWS) and for the highest amount of detail there is the [`CHANGELOG`](https://nano-editor.org/dist/latest/ChangeLog)
 
@@ -129,7 +131,7 @@ Be aware that while `nano` does come included with the other command line tools 
 
 General Mac OS terminal tip: *Many* (if not all) of the included cli tools are unusual variants that resemble the normal ones in *most* cases but will occasionally exhibit strange and frustrating behaviour. For example `grep`, `sort` and even `ls`. The `brew` package manage can help to install standard versions in a safe non destructive way. 
 
-#### windows 
+#### windows
 
 I am not sure about how this works on windows which I do not use. :(
 
@@ -145,12 +147,13 @@ from [`NANORC(5)` docs](https://nano-editor.org/dist/latest/nanorc.5.html#DESCRI
 
 You will be alerted to errors in 2 ways:
 
- 1. When you open `nano` there will be an error bar near the bottom displaying, `[ Mistakes in '/home/yourusername/.nanorc' ]`
- 2. When you then exit `nano`, there will be a description of the error and where it was found above the new command prompt, for example:
+1. When you open `nano` there will be an error bar near the bottom displaying, `[ Mistakes in '/home/yourusername/.nanorc' ]`
+2. When you then exit `nano`, there will be a description of the error and where it was found above the new command prompt, for example:
 
 ```bash
 Error in /home/youruser/.nanorc on line 149: Command "xxxxx" not understood
 ```
+
  so you can open nano and go to that line and inspect it, fix it or just prepend with `#` to comment it out.
 
 ### hints: Mac OS
@@ -162,14 +165,14 @@ On my system I had to do some extra configuring in iTerm2 in order to get the ke
 Documentation on how to modify keybindings in iTerm2 can be found [in its documentation](https://iterm2.com/documentation-preferences-profiles-keys.html). I followed the instructions to go to `Preferences` > `Profiles` > `Keys` > `General`:
 
 > Left/Right Option Key Acts As
->
+> 
 > It is common to use a modifier to send so-called "meta keys". For most users, selecting "+Esc" here is the right choice. The "Meta" option sets the high bit of the input character, and is not compatible with modern systems.
 
 By default, the modifier keys on a Mac keyboard from the bottom left unti lthe spacebar are: `⌃` `⌥` `⌘` these being:
 
- * `⌃` - `control` - this is the modifier that does most of the work by default in `nano`; key combinations should work as expected when identified such as `^X` to exit
- * `⌥` - `option` - if you make the configuration as specified, this should be the modifier `M-`
- * `⌘` - command - should not be assigned any `nano` powers, leaving it for control of the external environment like terminal editor.
+* `⌃` - `control` - this is the modifier that does most of the work by default in `nano`; key combinations should work as expected when identified such as `^X` to exit
+* `⌥` - `option` - if you make the configuration as specified, this should be the modifier `M-`
+* `⌘` - command - should not be assigned any `nano` powers, leaving it for control of the external environment like terminal editor.
 
 ## about editing and making your own files
 
@@ -179,82 +182,80 @@ See [`nano-configs/templates/colors.nanorc`](https://github.com/CouldBeThis/nano
 
 ### In the `nanorc` and `.nanorc` files
 
- * [ ] Spellchecking
- * [ ] Tidy up, remove old commented out configs
- 	* [ ] Perhaps organize old configs into alternative "sets" of command keys, color shemes
- 	* [X] ~~Perhaps split up files and `include` them in pieces~~ Not possible! Turns out it is only possible to  `include` *syntaxfile* whose contents are more limited than the `nanorc`. See the [`nanorc` documentation](https://www.mankier.com/5/nanorc#Syntax_Highlighting).
- * [ ] Make use of more keys I don't have on this particular device such as `del`, `pg up`/`pg dn` and `function` keys. 
- * [ ] Improve color scheme
- * [ ] Improve `ctrl` + arrow key navigation in how it deals with punctuation and special charecters... currently sort of confusing.
-* Syntax definition improvements (send some to upstream if they have not already been decided against there)
- 	* Markdown
- 		* [ ] add `==`text`==` for highlighting
- 		* [ ] codeblocks are a bit odd; see if I misunderstand their use of if they need tweaking
- 		* [ ] add nicer (lower contrast) colors if code is in a link 
- 		* [ ] improve anchor link display (higher constrast), e.g. `[top](#top)`
- 		* [ ] escape charecters
- 		* [ ] `YAML` frontmatter
- * [X] ~~on Mac: `M-`+ arrows activates linter.. why?~~
- * [ ] Move syntax changes that are just for myself to using `extendsyntax` and keep the main files general-purpose
-
+* [ ] Spellchecking
+* [ ] Tidy up, remove old commented out configs
+  * [ ] Perhaps organize old configs into alternative "sets" of command keys, color shemes
+  * [x] ~~Perhaps split up files and `include` them in pieces~~ Not possible! Turns out it is only possible to  `include` *syntaxfile* whose contents are more limited than the `nanorc`. See the [`nanorc` documentation](https://www.mankier.com/5/nanorc#Syntax_Highlighting).
+* [ ] Make use of more keys I don't have on this particular device such as `del`, `pg up`/`pg dn` and `function` keys. 
+* [ ] Improve color scheme
+* [ ] Improve `ctrl` + arrow key navigation in how it deals with punctuation and special charecters... currently sort of confusing.
+  * Syntax definition improvements (send some to upstream if they have not already been decided against there)
+    * Markdown
+      * [ ] add `==`text`==` for highlighting
+      * [ ] codeblocks are a bit odd; see if I misunderstand their use of if they need tweaking
+      * [ ] add nicer (lower contrast) colors if code is in a link 
+      * [ ] improve anchor link display (higher constrast), e.g. `[top](#top)`
+      * [ ] escape charecters
+      * [ ] `YAML` frontmatter
+* [x] ~~on Mac: `M-`+ arrows activates linter.. why?~~
+* [ ] Move syntax changes that are just for myself to using `extendsyntax` and keep the main files general-purpose
 
 ### In this repo
 
- * [x] ~~Organize files so it's clear what belongs to be and what belongs to the `scopatz/nanorc` repo~~
- 	* [x] ~~Perhaps include as a (forked) submodule~~
- * [x] ~~Install instructions~~
- 	* [ ] Install script ???
- * [ ] Summarize shortcuts (cheatsheet)
- 	* [ ] Perhaps including rationalization fos some decisions
- * [ ] Move this list to github issues?
+* [x] ~~Organize files so it's clear what belongs to be and what belongs to the `scopatz/nanorc` repo~~
+  * [x] ~~Perhaps include as a (forked) submodule~~
+* [x] ~~Install instructions~~
+  * [ ] Install script ???
+* [ ] Summarize shortcuts (cheatsheet)
+  * [ ] Perhaps including rationalization fos some decisions
+* [ ] Move this list to github issues?
 
 ### Wishlist (not sure if possible)
 
- * [X] ~~Smarter word wrapping that doesn't cut words apart~~
- * [ ] Change contents of the help menu at the bottom
- * [ ] Keystroke to commit file to `git` repo
- * [ ] Optimize keyboard shortcuts for markdown
- 	* `ctrl` + `1` (and so on): add `#` to start of line (make heading level 1)
- 	* add new list item at same indentation as current.
- 		* if possible to detect whether currently in a list and what level, this should be automatic behaviour on `enter`
- 		* if not, assign to some other keystroke
- 		* also include for task list (` * [ ]` or ` - [ ]`)
- 		* recognize either ` * ` or ` - ` lists
- 	* make current selection, or if none selected, current word **bold**, *italic*, ~~strikethrough~~, ==highlighted==, `code`
- 	* insert link/image 
- 		* with clipboard URL inserted and cursor in description/alt portion
- 		* if text selected, consider that text as description/alt and paste URL from clipboard 
- 		* is it possible to detect if clipboard contains URL?
- 		* how to interact between various clipboards?
- 	* Extra help screen for shortcuts and/or markdown syntaxt cheatsheet
- 	* Generate a TOC
- * [ ] Improved (less confusing) interaction bewteen terminal emulator and `nano`
+* [x] ~~Smarter word wrapping that doesn't cut words apart~~
+* [ ] Change contents of the help menu at the bottom
+* [ ] Keystroke to commit file to `git` repo
+* [ ] Optimize keyboard shortcuts for markdown
+  * `ctrl` + `1` (and so on): add `#` to start of line (make heading level 1)
+  * add new list item at same indentation as current.
+    * if possible to detect whether currently in a list and what level, this should be automatic behaviour on `enter`
+    * if not, assign to some other keystroke
+    * also include for task list (` * [ ]` or ` - [ ]`)
+    * recognize either ` * ` or ` - ` lists
+  * make current selection, or if none selected, current word **bold**, *italic*, ~~strikethrough~~, ==highlighted==, `code`
+  * insert link/image 
+    * with clipboard URL inserted and cursor in description/alt portion
+    * if text selected, consider that text as description/alt and paste URL from clipboard 
+    * is it possible to detect if clipboard contains URL?
+    * how to interact between various clipboards?
+  * Extra help screen for shortcuts and/or markdown syntaxt cheatsheet
+  * Generate a TOC
+  * Could be useful (from [`nanorc(5)`]([NANORC](https://nano-editor.org/dist/latest/nanorc.5.html)):
+    * `formatter` - **formatter** *program* [*argument* ...]
+      
+      > Invokes a full-buffer-processing program (if the active syntax defines one).
+    * `execute`
+      
+      > Prompts for a program to execute. The program’s output will be inserted into  the current buffer (or into a new buffer when **M−F** is toggled).
+    * macros:
+      
+      > `recordmacro`
+      > 
+      > Starts the recording of keystrokes -- the keystrokes are stored as a macro. When already recording, the recording is stopped.
+      > 
+      > `runmacro`
+      > 
+      > Replays the keystrokes of the last recorded macro.
+* [ ] Improved (less confusing) interaction bewteen terminal emulator and `nano`
 
 ## helpful resources
 
 Official `nano` website
 
- * [home page](https://nano-editor.org/)
- * [cheatsheet](https://nano-editor.org/dist/latest/cheatsheet.html) - default keybindings and shortcuts (many won't work if you use my configs of course)
- * [FAQ](https://nano-editor.org/dist/latest/faq.html) - answer many specific and technical problems users may encounter
- * [`.nanorc`](https://nano-editor.org/dist/latest/nanorc.5.html) - reference for the `nanorc` files
- * [user manual](https://nano-editor.org/dist/latest/nano.html)
- * Note the above links will automatically display information for the "latest" release of `nano` as per the URL. If you require the information regarding a *specific* version, they are organized in [this directory](https://nano-editor.org/dist/). 
- * [Enable Syntax Highlighting and Colors in nano](https://factorpad.com/tech/full-stack/nano-syntax-highlighting.html) - simple tutorial
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+* [home page](https://nano-editor.org/)
+* [cheatsheet](https://nano-editor.org/dist/latest/cheatsheet.html) - default keybindings and shortcuts (many won't work if you use my configs of course)
+* [FAQ](https://nano-editor.org/dist/latest/faq.html) - answer many specific and technical problems users may encounter
+* [`.nanorc`](https://nano-editor.org/dist/latest/nanorc.5.html) - reference for the `nanorc` files
+* [user manual](https://nano-editor.org/dist/latest/nano.html)
+* Note the above links will automatically display information for the "latest" release of `nano` as per the URL. If you require the information regarding a *specific* version, they are organized in [this directory](https://nano-editor.org/dist/). 
+* [Enable Syntax Highlighting and Colors in nano](https://factorpad.com/tech/full-stack/nano-syntax-highlighting.html) - simple tutorial
