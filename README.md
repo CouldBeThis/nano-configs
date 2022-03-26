@@ -183,9 +183,9 @@ See [`nano-configs/templates/colors.nanorc`](https://github.com/CouldBeThis/nano
 ### In the `nanorc` and `.nanorc` files
 
 * [ ] Spellchecking
-* [ ] Tidy up, remove old commented out configs
-  * [ ] Perhaps organize old configs into alternative "sets" of command keys, color shemes
-  * [x] ~~Perhaps split up files and `include` them in pieces~~ Not possible! Turns out it is only possible to  `include` *syntaxfile* whose contents are more limited than the `nanorc`. See the [`nanorc` documentation](https://www.mankier.com/5/nanorc#Syntax_Highlighting).
+* [ ] #14 Tidy up, remove old commented out configs
+  * [ ] #14 Perhaps organize old configs into alternative "sets" of command keys, color shemes
+  * [x] #14 ~~Perhaps split up files and `include` them in pieces~~ Not possible! Turns out it is only possible to  `include` *syntaxfile* whose contents are more limited than the `nanorc`. See the [`nanorc` documentation](https://www.mankier.com/5/nanorc#Syntax_Highlighting).
 * [ ] Make use of more keys I don't have on this particular device such as `del`, `pg up`/`pg dn` and `function` keys. 
 * [ ] Improve color scheme
 * [ ] Improve `ctrl` + arrow key navigation in how it deals with punctuation and special charecters... currently sort of confusing.
