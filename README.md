@@ -202,50 +202,50 @@ See [`nano-configs/templates/colors.nanorc`](https://github.com/CouldBeThis/nano
 
 ### In this repo
 
-* [x] ~~Organize files so it's clear what belongs to be and what belongs to the `scopatz/nanorc` repo~~
-  * [x] ~~Perhaps include as a (forked) submodule~~
+* [x] #16 ~~Organize files so it's clear what belongs to be and what belongs to the `scopatz/nanorc` repo~~
+  * [x] #16 ~~Perhaps include as a (forked) submodule~~
 * [x] ~~Install instructions~~
   * [ ] Install script ???
 * [ ] Summarize shortcuts (cheatsheet)
   * [ ] Perhaps including rationalization fos some decisions
-* [ ] Move this list to github issues?
+* [ ] #15 Move this list to github issues?
 
 ### Wishlist (not sure if possible)
 
 * [x] ~~Smarter word wrapping that doesn't cut words apart~~
 * [ ] Change contents of the help menu at the bottom
-* [ ] Keystroke to commit file to `git` repo
-* [ ] Optimize keyboard shortcuts for markdown
-  * `ctrl` + `1` (and so on): add `#` to start of line (make heading level 1)
-  * add new list item at same indentation as current.
-    * if possible to detect whether currently in a list and what level, this should be automatic behaviour on `enter`
-    * if not, assign to some other keystroke
-    * also include for task list (` * [ ]` or ` - [ ]`)
-    * recognize either ` * ` or ` - ` lists
-  * make current selection, or if none selected, current word **bold**, *italic*, ~~strikethrough~~, ==highlighted==, `code`
-  * insert link/image 
-    * with clipboard URL inserted and cursor in description/alt portion
-    * if text selected, consider that text as description/alt and paste URL from clipboard 
-    * is it possible to detect if clipboard contains URL?
-    * how to interact between various clipboards?
-  * Extra help screen for shortcuts and/or markdown syntaxt cheatsheet
-  * Generate a TOC
-  * Could be useful (from [`nanorc(5)`]([NANORC](https://nano-editor.org/dist/latest/nanorc.5.html)):
-    * `formatter` - **formatter** *program* [*argument* ...]
-      
-      > Invokes a full-buffer-processing program (if the active syntax defines one).
-    * `execute`
-      
-      > Prompts for a program to execute. The program’s output will be inserted into  the current buffer (or into a new buffer when **M−F** is toggled).
-    * macros:
-      
-      > `recordmacro`
-      > 
-      > Starts the recording of keystrokes -- the keystrokes are stored as a macro. When already recording, the recording is stopped.
-      > 
-      > `runmacro`
-      > 
-      > Replays the keystrokes of the last recorded macro.
+* [ ] #17 Keystroke to commit file to `git` repo
+* [ ] #17 Optimize keyboard shortcuts for markdown
+  * [ ] `ctrl` + `1` (and so on): add `#` to start of line (make heading level 1)
+  * [ ] #17 add new list item at same indentation as current.
+    * [ ] if possible to detect whether currently in a list and what level, this should be automatic behaviour on `enter`
+    * [ ] if not, assign to some other keystroke
+    * [ ] also include for task list (` * [ ]` or ` - [ ]`)
+    * [ ] recognize either ` * ` or ` - ` lists
+  * [ ] #17 make current selection, or if none selected, current word **bold**, *italic*, ~~strikethrough~~, ==highlighted==, `code`
+  * [ ] #17 insert link/image 
+    * [ ] with clipboard URL inserted and cursor in description/alt portion
+    * [ ] if text selected, consider that text as description/alt and paste URL from clipboard 
+    * [ ] is it possible to detect if clipboard contains URL?
+    * [ ] how to interact between various clipboards?
+  * [ ] #17 Extra help screen for shortcuts and/or markdown syntaxt cheatsheet
+  * [ ] #17 Generate a TOC
+* [ ] Could be useful (from [`nanorc(5)`]([NANORC](https://nano-editor.org/dist/latest/nanorc.5.html)):
+  * `formatter` - **formatter** *program* [*argument* ...]
+    
+    > Invokes a full-buffer-processing program (if the active syntax defines one).
+  * `execute`
+    
+    > Prompts for a program to execute. The program’s output will be inserted into  the current buffer (or into a new buffer when **M−F** is toggled).
+  * macros:
+    
+    > `recordmacro`
+    > 
+    > Starts the recording of keystrokes -- the keystrokes are stored as a macro. When already recording, the recording is stopped.
+    > 
+    > `runmacro`
+    > 
+    > Replays the keystrokes of the last recorded macro.
 * [ ] Improved (less confusing) interaction bewteen terminal emulator and `nano`
 
 ## helpful resources
