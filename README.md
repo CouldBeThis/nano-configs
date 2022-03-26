@@ -215,7 +215,7 @@ See [`nano-configs/templates/colors.nanorc`](https://github.com/CouldBeThis/nano
 ### Wishlist (not sure if possible)
 
 - [ ] ~~Smarter word wrapping that doesn't cut words apart~~
-- [ ] #19, #20 Change contents of the help menu at the bottom (I do not think this is possible)
+- [ ] #19, #21 Change contents of the help menu at the bottom (I do not think this is possible)
 - [ ] #17 Keystroke to commit file to `git` repo
 - [ ] #17 & #19 Optimize keyboard shortcuts for markdown
   * [ ] `ctrl` + `1` (and so on): add `#` to start of line (make heading level 1)
