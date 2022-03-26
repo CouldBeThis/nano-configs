@@ -31,7 +31,7 @@ Takes advantage of modern terminals with many colors.
       * [Wishlist (not sure if possible)](#wishlist-not-sure-if-possible)
    * [helpful resources](#helpful-resources)
 
-<!-- Added by: CouldBeThis, at: Sun 27 Feb 2022 04:17:53 EST -->
+<!-- Added by: CouldBeThis , at: Sun 27 Feb 2022 04:17:53 EST -->
 
 <!--te-->
 
