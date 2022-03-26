@@ -190,7 +190,7 @@ See [`nano-configs/templates/colors.nanorc`](https://github.com/CouldBeThis/nano
 * [ ] Improve color scheme
 * [ ] Improve `ctrl` + arrow key navigation in how it deals with punctuation and special charecters... currently sort of confusing.
   * Syntax definition improvements (send some to upstream if they have not already been decided against there)
-    * Markdown
+    * [ ] #17 Markdown
       * [ ] add `==`text`==` for highlighting
       * [ ] codeblocks are a bit odd; see if I misunderstand their use of if they need tweaking
       * [ ] add nicer (lower contrast) colors if code is in a link 
