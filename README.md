@@ -187,16 +187,20 @@ See [`nano-configs/templates/colors.nanorc`](https://github.com/CouldBeThis/nano
   * [ ] #14 Perhaps organize old configs into alternative "sets" of command keys, color shemes
   * [x] #14 ~~Perhaps split up files and `include` them in pieces~~ Not possible! Turns out it is only possible to  `include` *syntaxfile* whose contents are more limited than the `nanorc`. See the [`nanorc` documentation](https://www.mankier.com/5/nanorc#Syntax_Highlighting).
 * [ ] Make use of more keys I don't have on this particular device such as `del`, `pg up`/`pg dn` and `function` keys. 
-* [ ] Improve color scheme
+* [ ] #18 Improve color scheme
 * [ ] Improve `ctrl` + arrow key navigation in how it deals with punctuation and special charecters... currently sort of confusing.
-  * Syntax definition improvements (send some to upstream if they have not already been decided against there)
-    * [ ] #17 Markdown
-      * [ ] add `==`text`==` for highlighting
-      * [ ] codeblocks are a bit odd; see if I misunderstand their use of if they need tweaking
-      * [ ] add nicer (lower contrast) colors if code is in a link 
-      * [ ] improve anchor link display (higher constrast), e.g. `[top](#top)`
-      * [ ] escape charecters
-      * [ ] `YAML` frontmatter
+  
+  
+  
+  
+- [ ] Syntax definition improvements (send some to upstream if they have not already been decided against there)
+  * [ ] #17 Markdown
+    * [ ] add `==`text`==` for highlighting
+    * [ ] codeblocks are a bit odd; see if I misunderstand their use of if they need tweaking
+    * [ ] add nicer (lower contrast) colors if code is in a link 
+    * [ ] improve anchor link display (higher constrast), e.g. `[top](#top)`
+    * [ ] escape charecters
+    * [ ] `YAML` frontmatter
 * [x] ~~on Mac: `M-`+ arrows activates linter.. why?~~
 * [ ] Move syntax changes that are just for myself to using `extendsyntax` and keep the main files general-purpose
 
