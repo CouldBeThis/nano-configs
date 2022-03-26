@@ -191,6 +191,7 @@ See [`nano-configs/templates/colors.nanorc`](https://github.com/CouldBeThis/nano
 * #19 Make use of more keys I don't have on this particular device such as `del`, `pg up`/`pg dn` and `function` keys. 
 * #18 Improve color scheme
 * #19 Improve `ctrl` + arrow key navigation in how it deals with punctuation and special charecters... currently sort of confusing.
+
 - Syntax definition improvements (send some to upstream if they have not already been decided against there)
   * [ ] #17 & #19 Markdown
     * [ ] add `==`text`==` for highlighting
@@ -200,7 +201,9 @@ See [`nano-configs/templates/colors.nanorc`](https://github.com/CouldBeThis/nano
     * [ ] escape charecters
     * [ ] `YAML` frontmatter
 * ~~on Mac: `M-`+ arrows activates linter.. why?~~
-* #16 Move syntax changes that are just for myself to using `extendsyntax` and keep the main files general-purpose
+
+- [ ] #16 Move syntax changes that are just for myself to using `extendsyntax` and keep the main files general-purpose
+
 
 ### In this repo
 
