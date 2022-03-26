@@ -5,3 +5,4 @@ search_history
 *_history
 *.save
 _test.*
+*.backup
