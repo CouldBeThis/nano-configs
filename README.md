@@ -182,19 +182,15 @@ See [`nano-configs/templates/colors.nanorc`](https://github.com/CouldBeThis/nano
 
 ### In the `nanorc` and `.nanorc` files
 
-* [ ] Spellchecking
+* [ ] #19 Spellchecking
 * [ ] #14 Tidy up, remove old commented out configs
   * [ ] #14 Perhaps organize old configs into alternative "sets" of command keys, color shemes
   * [x] #14 ~~Perhaps split up files and `include` them in pieces~~ Not possible! Turns out it is only possible to  `include` *syntaxfile* whose contents are more limited than the `nanorc`. See the [`nanorc` documentation](https://www.mankier.com/5/nanorc#Syntax_Highlighting).
-* [ ] Make use of more keys I don't have on this particular device such as `del`, `pg up`/`pg dn` and `function` keys. 
+* [ ] #19 Make use of more keys I don't have on this particular device such as `del`, `pg up`/`pg dn` and `function` keys. 
 * [ ] #18 Improve color scheme
-* [ ] Improve `ctrl` + arrow key navigation in how it deals with punctuation and special charecters... currently sort of confusing.
-  
-  
-  
-  
+* [ ] #19 Improve `ctrl` + arrow key navigation in how it deals with punctuation and special charecters... currently sort of confusing.
 - [ ] Syntax definition improvements (send some to upstream if they have not already been decided against there)
-  * [ ] #17 Markdown
+  * [ ] #17 & #19 Markdown
     * [ ] add `==`text`==` for highlighting
     * [ ] codeblocks are a bit odd; see if I misunderstand their use of if they need tweaking
     * [ ] add nicer (lower contrast) colors if code is in a link 
@@ -217,9 +213,9 @@ See [`nano-configs/templates/colors.nanorc`](https://github.com/CouldBeThis/nano
 ### Wishlist (not sure if possible)
 
 * [x] ~~Smarter word wrapping that doesn't cut words apart~~
-* [ ] Change contents of the help menu at the bottom
+* [ ] #19 Change contents of the help menu at the bottom
 * [ ] #17 Keystroke to commit file to `git` repo
-* [ ] #17 Optimize keyboard shortcuts for markdown
+* [ ] #17 & #19 Optimize keyboard shortcuts for markdown
   * [ ] `ctrl` + `1` (and so on): add `#` to start of line (make heading level 1)
   * [ ] #17 add new list item at same indentation as current.
     * [ ] if possible to detect whether currently in a list and what level, this should be automatic behaviour on `enter`
@@ -234,7 +230,7 @@ See [`nano-configs/templates/colors.nanorc`](https://github.com/CouldBeThis/nano
     * [ ] how to interact between various clipboards?
   * [ ] #17 Extra help screen for shortcuts and/or markdown syntaxt cheatsheet
   * [ ] #17 Generate a TOC
-* [ ] Could be useful (from [`nanorc(5)`]([NANORC](https://nano-editor.org/dist/latest/nanorc.5.html)):
+* [ ] #19 Could be useful (from [`nanorc(5)`]([NANORC](https://nano-editor.org/dist/latest/nanorc.5.html)):
   * `formatter` - **formatter** *program* [*argument* ...]
     
     > Invokes a full-buffer-processing program (if the active syntax defines one).
