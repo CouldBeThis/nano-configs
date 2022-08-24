@@ -1,0 +1,6 @@
+# ignore because they contain system specific information
+
+filepos_history
+search_history
+*_history
+*.save

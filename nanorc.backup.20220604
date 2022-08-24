@@ -1,0 +1,240 @@
+## Please see the file README.md before using!
+
+set linenumbers
+# set mouse does the opposite of what it sounds like.. unsets the mouse.
+#set mouse
+set autoindent
+#set smooth
+set softwrap
+set tabsize 4
+
+## Remember the used search/replace strings for the next session.
+#set historylog
+
+## Display a "scrollbar" on the righthand side of the edit window.
+set indicator
+
+## Save the cursor position of files between editing sessions. The cursor position is remembered for the 200 most-recently edited files. 
+set positionlog
+
+## Make the Home key smarter. When Home is pressed anywhere but at the very beginning of non-whitespace characters on a line, the cursor will jump to that beginning (either forwards or backwards). If the cursor is already at that position, it will jump to the true beginning of the line.
+#set smarthome
+
+## Suppress the title bar and instead show information about the current buffer at the bottom of the screen, in the space for the status bar. 
+set minibar
+
+## Use the top-right corner of the screen for showing some state flags: I when auto-indenting, M when the mark is on, L when hard-wrapping (breaking long lines), R when recording a macro, and S when soft-wrapping. When the buffer is modified, a star (*) is shown after the filename in the center of the title bar. 
+set stateflags
+
+set speller hunspell
+
+######## COLORS #########
+## white, black, blue, green, red, cyan, yellow, magenta, and normal (default)
+## other valid (but unprefixable) color names are: pink, purple, mauve,##lagoon, mint, lime, peach, orange, latte, rosy, beet, plum, sea, sky, slate, teal, sage, brown, ocher, sand, tawny, brick, crimson, and normal
+## color may also be specified as a three-digit hexadecimal number prefixed with #, with the digits representing the amounts of red, green, and blue, respectively.
+
+## NO SPACE after comma!
+
+#set titlecolor white,blue
+#set numbercolor blue
+#set titlecolor magenta,rosy
+#set numbercolor sky,sea
+set numbercolor sea
+set titlecolor sea,black
+set minicolor bold,black,lagoon
+#set titlecolor tawny,beet
+
+## Use bold instead of reverse video for the title bar, status bar, key combos, function tags, line numbers, and selected text
+#set boldtext
+
+## status bar when an error message is displayed
+#set errorcolor white,brick
+
+## shortcut key combos in the two help lines at the bottom of the screen
+#set keycolor white,cyan
+#set keycolor brick,peach
+set keycolor sky
+
+## function descriptions in the two help lines at the bottom of the screen.
+#set functioncolor cyan,black
+#set functioncolor peach,black
+set functioncolor sea
+
+## selected text
+set selectedcolor bold,mauve,black
+
+set scrollercolor lagoon,slate
+
+######### from v5 sample.nanorc #########
+
+
+## === Key bindings ===
+
+## NETBOOK:
+## 	^		=	ctrl
+##	M-		=	alt
+##	Sh-		=	shift
+##	???		=	caps
+##	???		=	function keys
+
+##The format of key should be one of:
+##  ^X —— where X is a Latin letter, or one of several ASCII characters (@, ], \, ^, _), or the word "Space". Example: ^C.
+##    M-X —— where X is any ASCII character except [, or the word "Space". Example: M-8.
+##    Sh-M-X —— where X is a Latin letter. Example: Sh-M-U. By default, each Meta+letter keystroke does the same as the corresponding Shift+Meta+letter. But when any Shift+Meta bind is made, that will no longer be the case, for all letters.
+##    Fn —— where n is a numeric value from 1 to 24. Example: F10. (Often, F13 to F24 can be typed as F1 to F12 with Shift.)
+##    Ins or Del. 
+
+## ctrl + backspace = delete entire word to the left
+bind ^H chopwordleft main
+
+bind ^X exit all
+bind ^S savefile main
+#bind ^W writeout main
+#bind ^O insert main
+bind M-H help all
+bind M-H exit help
+bind M-F whereis all
+#bind Sh-M-F findnext all
+bind M-G findnext all
+#bind ^B wherewas all
+#bind ^D findprevious all
+bind M-R replace main
+#bind M-X flipnewbuffer all
+unbind M-X all
+bind M-X cut all
+bind M-C copy all
+bind M-V paste all
+bind M-P location main
+#bind ^A mark main
+#unbind ^K main
+#unbind ^U all
+#unbind ^N main
+#unbind ^Y all
+#unbind M-J main
+#unbind M-T main
+#bind ^T gotodir browser
+bind ^Y speller main
+
+# Toggles the display of line numbers in front of the text.
+unbind M-L all
+bind Sh-M-L linenumbers all
+
+# Goes to a specific line (and column if specified). Negative numbers count from the end of the file (and end of the line).
+bind M-L gotoline all
+
+## Throw away the current line (or the marked region). (This function is bound by default to <Meta+Delete>.)
+bind M-D zap main
+
+## Let an unmodified Backspace or Delete erase the marked region (instead of a single character, and without affecting the cutbuffer).
+## does not work on NETBOOK
+set zap
+
+## original
+##bind M-U undo main
+##bind M-R redo main
+unbind ^Z all
+bind ^Z undo main
+## disabled because it produces the error of being "invalid" (gallium)
+#bind M^Z redo main
+#bind ^U undo main
+#bind ^E redo main
+#set multibuffer
+
+## below installed and set up from https://github.com/scopatz/nanorc
+## to install:
+## curl https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh | sh
+
+## commenting out filetypes I do not anticipate using
+
+include "~/.nano/apacheconf.nanorc"
+# include "~/.nano/arduino.nanorc"
+include "~/.nano/asciidoc.nanorc"
+#include "~/.nano/asm.nanorc"
+include "~/.nano/awk.nanorc"
+include "~/.nano/c.nanorc"
+#include "~/.nano/clojure.nanorc"
+include "~/.nano/cmake.nanorc"
+include "~/.nano/coffeescript.nanorc"
+include "~/.nano/colortest.nanorc"
+include "~/.nano/conf.nanorc"
+#include "~/.nano/csharp.nanorc"
+include "~/.nano/css.nanorc"
+#include "~/.nano/cython.nanorc"
+include "~/.nano/dot.nanorc"
+include "~/.nano/dotenv.nanorc"
+include "~/.nano/email.nanorc"
+include "~/.nano/Dockerfile.nanorc"
+include "~/.nano/etc-hosts.nanorc"
+include "~/.nano/fish.nanorc"
+#include "~/.nano/fortran.nanorc"
+#include "~/.nano/gentoo.nanorc"
+include "~/.nano/git.nanorc"
+include "~/.nano/gitcommit.nanorc"
+#include "~/.nano/glsl.nanorc"
+include "~/.nano/go.nanorc"
+include "~/.nano/gradle.nanorc"
+include "~/.nano/groff.nanorc"
+#include "~/.nano/haml.nanorc"
+include "~/.nano/haskell.nanorc"
+include "~/.nano/html.nanorc"
+include "~/.nano/html.j2.nanorc"
+include "~/.nano/ical.nanorc"
+include "~/.nano/ini.nanorc"
+include "~/.nano/inputrc.nanorc"
+#include "~/.nano/jade.nanorc"
+include "~/.nano/java.nanorc"
+include "~/.nano/javascript.nanorc"
+include "~/.nano/js.nanorc"
+include "~/.nano/json.nanorc"
+include "~/.nano/keymap.nanorc"
+#include "~/.nano/kickstart.nanorc"
+include "~/.nano/kotlin.nanorc"
+#include "~/.nano/ledger.nanorc"
+include "~/.nano/lisp.nanorc"
+include "~/.nano/lua.nanorc"
+include "~/.nano/makefile.nanorc"
+include "~/.nano/man.nanorc"
+include "~/.nano/markdown.nanorc"
+#include "~/.nano/mpdconf.nanorc"
+include "~/.nano/mutt.nanorc"
+include "~/.nano/nanorc.nanorc"
+include "~/.nano/nginx.nanorc"
+include "~/.nano/nmap.nanorc"
+include "~/.nano/ocaml.nanorc"
+include "~/.nano/patch.nanorc"
+#include "~/.nano/peg.nanorc"
+include "~/.nano/perl.nanorc"
+include "~/.nano/perl6.nanorc"
+include "~/.nano/php.nanorc"
+include "~/.nano/pkg-config.nanorc"
+include "~/.nano/pkgbuild.nanorc"
+#include "~/.nano/po.nanorc"
+#include "~/.nano/pov.nanorc"
+#include "~/.nano/privoxy.nanorc"
+include "~/.nano/puppet.nanorc"
+#include "~/.nano/pug.nanorc"
+include "~/.nano/python.nanorc"
+include "~/.nano/reST.nanorc"
+include "~/.nano/rpmspec.nanorc"
+include "~/.nano/ruby.nanorc"
+include "~/.nano/rust.nanorc"
+include "~/.nano/scala.nanorc"
+include "~/.nano/sed.nanorc"
+include "~/.nano/sh.nanorc"
+#include "~/.nano/sls.nanorc"
+include "~/.nano/sql.nanorc"
+#include "~/.nano/svn.nanorc"
+include "~/.nano/swift.nanorc"
+include "~/.nano/systemd.nanorc"
+include "~/.nano/tcl.nanorc"
+include "~/.nano/tex.nanorc"
+include "~/.nano/vala.nanorc"
+#include "~/.nano/verilog.nanorc"
+include "~/.nano/vi.nanorc"
+include "~/.nano/xml.nanorc"
+include "~/.nano/xresources.nanorc"
+include "~/.nano/yaml.nanorc"
+#include "~/.nano/yum.nanorc"
+include "~/.nano/zsh.nanorc"
+include "~/.nano/gitignore.nanorc"
+
