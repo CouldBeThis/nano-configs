@@ -107,8 +107,7 @@ set zap
 ##	???		=	function keys
 
 ##The format of key should be one of:
-##  ^X —— where X is a Latin letter, or one of several ASCII characters (@
-, ], \, ^, _), or the word "Space". Example: ^C.
+##  ^X —— where X is a Latin letter, or one of several ASCII characters (@ , ], \, ^, _), or the word "Space". Example: ^C.
 ##    M-X —— where X is any ASCII character except [, or the word "Space". Example: M-8.
 ##    Sh-M-X —— where X is a Latin letter. Example: Sh-M-U. By default, each Meta+letter keystroke does the same as the corresponding Shift+Meta+letter. But when any Shift+Meta bind is made, that will no longer be the case, for all letters.
 ##    Fn —— where n is a numeric value from 1 to 24. Example: F10. (Often, F13 to F24 can be typed as F1 to F12 with Shift.)
