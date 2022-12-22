@@ -1,0 +1,79 @@
+################# KEYBINDINGS ##################
+## . . . . . . . . . . . . . . . . . . . . . .##
+##
+
+## linux:
+## 	^		=	ctrl
+##	M-		=	alt
+##	Sh-		=	shift
+##	???		=	caps
+##	???		=	function keys
+
+##The format of key should be one of:
+##  ^X —— where X is a Latin letter, or one of several ASCII characters (@ , ], \, ^, _), or the word "Space". Example: ^C.
+##    M-X —— where X is any ASCII character except [, or the word "Space". Example: M-8.
+##    Sh-M-X —— where X is a Latin letter. Example: Sh-M-U. By default, each Meta+letter keystroke does the same as the corresponding Shift+Meta+letter. But when any Shift+Meta bind is made, that will no longer be the case, for all letters.
+##    Fn —— where n is a numeric value from 1 to 24. Example: F10. (Often, F13 to F24 can be typed as F1 to F12 with Shift.)
+##    Ins or Del.
+
+## ctrl + backspace = delete entire word to the left
+bind ^H chopwordleft main
+
+bind M-X exit all
+bind ^S savefile main
+#bind ^W writeout main
+#bind ^O insert main
+bind M-H help all
+bind M-H exit help
+bind ^F whereis all
+bind ^G findnext all
+#bind ^B wherewas all
+#bind ^D findprevious all
+bind ^R replace main
+#bind M-X flipnewbuffer all
+
+#unbind M-X all
+bind ^K cut all
+bind ^C copy all
+bind ^V paste all
+## nano will not start if ^C is bound to something other than the default unless cancel in yesno menu has a new binding assigned to it
+bind ^C cancel yesno
+
+#bind ^P location main
+bind ^A mark main
+#unbind ^K main
+#unbind ^U all
+#unbind ^N main
+#unbind ^Y all
+#unbind M-J main
+#unbind M-T main
+#bind ^T gotoline main
+#bind ^T gotodir browser
+bind ^Y speller main
+
+# Toggles the display of line numbers in front of the text.
+unbind M-L all
+bind M-L linenumbers all
+
+# Goes to a specific line (and column if specified). Negative numbers count from the end of the file (and end of the line).
+bind M-G gotoline all
+
+## Throw away the current line (or the marked region). (This function is bound by default to <Meta+Delete>.)
+bind M-D zap main
+
+
+## original
+##bind M-U undo main
+##bind M-R redo main
+unbind ^Z all
+bind ^Z undo main
+## disabled because it produces the error of being "invalid" (NETBOOK)
+#bind M^Z redo main
+#bind ^U undo main
+#bind ^E redo main
+
+
+## remove shortcut to invoke linter
+unbind M-B all
+## remove shortcut to format/arrange/manipulate buffer
+unbind M-F all
